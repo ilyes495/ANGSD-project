@@ -1,0 +1,4 @@
+"0","new_names <- unlist(lapply(strsplit(orig_names[2:30], ""[.]""), function(x) x[5]))"
+"0","new_names <- unlist(lapply(strsplit(new_names, ""_""), function(x) paste(x[2:(length(x)-3)], collapse=""_"")))"
+"0","### alternatives:"
+"0","names(readcounts) <- c(names(readcounts)[1:6], new_names) # less potential for typos"

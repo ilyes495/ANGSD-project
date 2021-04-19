@@ -1,0 +1,49 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	SRR6703987_frozen_507f_2_fastqc | SRR6703987_frozen_507f_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703987_frozen_507f_2_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703988_frozen_510_2_val_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703988_frozen_510_2_val_2_fastqc.zip
+FastQC	all_sections	SRR6703989_frozen_510f_1_fastqc | SRR6703989_frozen_510f_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703989_frozen_510f_1_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703985_frozen_506f_2_fastqc | SRR6703985_frozen_506f_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703985_frozen_506f_2_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703984_frozen_506_1_fastqc | SRR6703984_frozen_506_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703984_frozen_506_1_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703982_frozen_501_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703982_frozen_501_2_fastqc.zip
+FastQC	all_sections	SRR6703985_frozen_506f_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703985_frozen_506f_1_fastqc.zip
+FastQC	all_sections	SRR6703988_frozen_510_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703988_frozen_510_1_fastqc.zip
+FastQC	all_sections	SRR6703983_frozen_501f_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703983_frozen_501f_2_fastqc.zip
+FastQC	all_sections	SRR6703987_frozen_507f_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703987_frozen_507f_1_fastqc.zip
+FastQC	all_sections	SRR6703989_frozen_510f_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703989_frozen_510f_1_fastqc.zip
+FastQC	all_sections	SRR6703989_frozen_510f_1_val_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703989_frozen_510f_1_val_1_fastqc.zip
+FastQC	all_sections	SRR6703982_frozen_501_1_val_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703982_frozen_501_1_val_1_fastqc.zip
+FastQC	all_sections	SRR6703985_frozen_506f_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703985_frozen_506f_2_fastqc.zip
+FastQC	all_sections	SRR6703982_frozen_501_2_val_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703982_frozen_501_2_val_2_fastqc.zip
+FastQC	all_sections	SRR6703984_frozen_506_2_val_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703984_frozen_506_2_val_2_fastqc.zip
+FastQC	all_sections	SRR6703986_frozen_507_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703986_frozen_507_2_fastqc.zip
+FastQC	all_sections	SRR6703983_frozen_501f_1_val_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703983_frozen_501f_1_val_1_fastqc.zip
+FastQC	all_sections	SRR6703986_frozen_507_2_val_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703986_frozen_507_2_val_2_fastqc.zip
+FastQC	all_sections	SRR6703987_frozen_507f_1_fastqc | SRR6703987_frozen_507f_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703987_frozen_507f_1_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703986_frozen_507_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703986_frozen_507_1_fastqc.zip
+FastQC	all_sections	SRR6703986_frozen_507_1_val_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703986_frozen_507_1_val_1_fastqc.zip
+FastQC	all_sections	SRR6703988_frozen_510_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703988_frozen_510_2_fastqc.zip
+FastQC	all_sections	SRR6703985_frozen_506f_1_fastqc | SRR6703985_frozen_506f_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703985_frozen_506f_1_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703988_frozen_510_1_fastqc | SRR6703988_frozen_510_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703988_frozen_510_1_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703987_frozen_507f_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703987_frozen_507f_2_fastqc.zip
+FastQC	all_sections	SRR6703983_frozen_501f_2_val_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703983_frozen_501f_2_val_2_fastqc.zip
+FastQC	all_sections	SRR6703982_frozen_501_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703982_frozen_501_1_fastqc.zip
+FastQC	all_sections	SRR6703989_frozen_510f_2_val_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703989_frozen_510f_2_val_2_fastqc.zip
+FastQC	all_sections	SRR6703983_frozen_501f_1_fastqc | SRR6703983_frozen_501f_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703983_frozen_501f_1_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703985_frozen_506f_2_val_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703985_frozen_506f_2_val_2_fastqc.zip
+FastQC	all_sections	SRR6703989_frozen_510f_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703989_frozen_510f_2_fastqc.zip
+FastQC	all_sections	SRR6703984_frozen_506_1_val_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703984_frozen_506_1_val_1_fastqc.zip
+FastQC	all_sections	SRR6703983_frozen_501f_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703983_frozen_501f_1_fastqc.zip
+FastQC	all_sections	SRR6703983_frozen_501f_2_fastqc | SRR6703983_frozen_501f_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703983_frozen_501f_2_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703988_frozen_510_1_val_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703988_frozen_510_1_val_1_fastqc.zip
+FastQC	all_sections	SRR6703986_frozen_507_2_fastqc | SRR6703986_frozen_507_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703986_frozen_507_2_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703984_frozen_506_2_fastqc | SRR6703984_frozen_506_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703984_frozen_506_2_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703986_frozen_507_1_fastqc | SRR6703986_frozen_507_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703986_frozen_507_1_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703987_frozen_507f_1_val_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703987_frozen_507f_1_val_1_fastqc.zip
+FastQC	all_sections	SRR6703982_frozen_501_2_fastqc | SRR6703982_frozen_501_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703982_frozen_501_2_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703989_frozen_510f_2_fastqc | SRR6703989_frozen_510f_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703989_frozen_510f_2_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703988_frozen_510_2_fastqc | SRR6703988_frozen_510_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703988_frozen_510_2_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703985_frozen_506f_1_val_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703985_frozen_506f_1_val_1_fastqc.zip
+FastQC	all_sections	SRR6703982_frozen_501_1_fastqc | SRR6703982_frozen_501_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703982_frozen_501_1_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703987_frozen_507f_2_val_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703987_frozen_507f_2_val_2_fastqc.zip
+FastQC	all_sections	SRR6703984_frozen_506_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703984_frozen_506_2_fastqc.zip
+FastQC	all_sections	SRR6703984_frozen_506_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703984_frozen_506_1_fastqc.zip

@@ -1,0 +1,5 @@
+"0",""
+"0","# Pearson corr. for log.norm.values"
+"0","as.dist( 1 - cor(log.norm.counts, method = ""pearson"")) %>% "
+"0","  hclust %>% "
+"0","  plot( ., labels = colnames(log.norm.counts), main = ""no rlog"")"

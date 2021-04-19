@@ -1,0 +1,4 @@
+"0","## the rlog-transformed counts are stored in the accessor ""assay"""
+"0","plot(assay(DESeq.rlog)[,1], assay(DESeq.rlog)[,2],"
+"0","cex=.1, main = ""rlog transformed"","
+"0","xlab = colnames(assay(DESeq.rlog[,1])), ylab = colnames(assay(DESeq.rlog[,2])) )"

@@ -1,0 +1,4 @@
+"0","assay(DESeq.ds, ""log.counts"") <- log2(counts(DESeq.ds, normalized = FALSE) + 1)"
+"0","## normalized read counts"
+"0","log.norm.counts <- log2(counts(DESeq.ds, normalized=TRUE) + 1) "
+"0","assay(DESeq.ds, ""log.norm.counts"") <- log.norm.counts"

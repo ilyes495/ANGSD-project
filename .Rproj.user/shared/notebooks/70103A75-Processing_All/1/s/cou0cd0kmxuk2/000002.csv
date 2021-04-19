@@ -1,0 +1,8 @@
+"0","keep_genes <- rowSums(counts(DESeq.ds)) > 0"
+"0","DESeq.ds <- DESeq.ds[ keep_genes, ] "
+"0","dim(DESeq.ds)"
+"1","[1]"
+"1"," 48495"
+"1","    29"
+"1","
+"

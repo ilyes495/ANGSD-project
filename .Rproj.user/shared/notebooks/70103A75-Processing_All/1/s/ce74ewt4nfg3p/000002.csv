@@ -1,0 +1,2 @@
+"0","DESeq.ds <- estimateSizeFactors(DESeq.ds) # calculate SFs, add them to object"
+"0","DESeq.rlog <- rlog(DESeq.ds, blind = TRUE)"

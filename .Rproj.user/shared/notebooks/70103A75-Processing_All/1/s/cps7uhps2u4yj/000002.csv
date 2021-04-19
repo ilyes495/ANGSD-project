@@ -1,0 +1,1 @@
+"0"," colSums(counts(DESeq.ds)) %>% barplot"

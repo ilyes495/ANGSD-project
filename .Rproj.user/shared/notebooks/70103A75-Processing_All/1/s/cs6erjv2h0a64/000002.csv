@@ -1,0 +1,2 @@
+"0","rlog.norm.counts <- assay(DESeq.rlog)"
+"0","save.image(file = ""RNAseq.RData"")"

@@ -1,0 +1,204 @@
+[2021-04-13 11:26:53,542] multiqc                                            [DEBUG  ]  No MultiQC config found: /pbtech_mounts/softlib001/apps/EL7/spack/opt/spack/linux-centos7-x86_64/gcc-6.3.0/py-multiqc-1.7-7wstaml7opzvdb5liiuxniifwufxfmzv/lib/python3.5/site-packages/multiqc_config.yaml
+[2021-04-13 11:26:53,543] multiqc                                            [DEBUG  ]  No MultiQC config found: /home/ilb4001/.multiqc_config.yaml
+[2021-04-13 11:26:53,543] multiqc                                            [DEBUG  ]  No MultiQC config found: multiqc_config.yaml
+[2021-04-13 11:26:53,543] multiqc                                            [DEBUG  ]  Command used: /pbtech_mounts/softlib001/apps/EL7/spack/opt/spack/linux-centos7-x86_64/gcc-6.3.0/py-multiqc-1.7-7wstaml7opzvdb5liiuxniifwufxfmzv/bin/multiqc -d -v -o multiqc/ RSeqc_2/ alignments/SRR6703961_concentration_1_rep1_1_val_1.Log.final.out alignments/SRR6703961_concentration_1_rep1_1_val_1.Log.out alignments/SRR6703961_concentration_1_rep1_1_val_1.Log.progress.out alignments/SRR6703962_concentration_100_rep1_1_val_1.Log.final.out alignments/SRR6703962_concentration_100_rep1_1_val_1.Log.out alignments/SRR6703962_concentration_100_rep1_1_val_1.Log.progress.out alignments/SRR6703963_concentration_250_rep1_1_val_1.Log.final.out alignments/SRR6703963_concentration_250_rep1_1_val_1.Log.out alignments/SRR6703963_concentration_250_rep1_1_val_1.Log.progress.out alignments/SRR6703964_concentration_500_rep1_1_val_1.Log.final.out alignments/SRR6703964_concentration_500_rep1_1_val_1.Log.out alignments/SRR6703964_concentration_500_rep1_1_val_1.Log.progress.out alignments/SRR6703965_concentration_1_rep2_1_val_1.Log.final.out alignments/SRR6703965_concentration_1_rep2_1_val_1.Log.out alignments/SRR6703965_concentration_1_rep2_1_val_1.Log.progress.out alignments/SRR6703966_concentration_100_rep2_1_val_1.Log.final.out alignments/SRR6703966_concentration_100_rep2_1_val_1.Log.out alignments/SRR6703966_concentration_100_rep2_1_val_1.Log.progress.out alignments/SRR6703967_concentration_100_rep2_1_val_1.Log.final.out alignments/SRR6703967_concentration_100_rep2_1_val_1.Log.out alignments/SRR6703967_concentration_100_rep2_1_val_1.Log.progress.out alignments/SRR6703968_concentration_500_rep2_1_val_1.Log.final.out alignments/SRR6703968_concentration_500_rep2_1_val_1.Log.out alignments/SRR6703968_concentration_500_rep2_1_val_1.Log.progress.out alignments/SRR6703969_time_101SR_1_val_1.Log.final.out alignments/SRR6703969_time_101SR_1_val_1.Log.out alignments/SRR6703969_time_101SR_1_val_1.Log.progress.out alignments/SRR6703970_time_101FR_1_val_1.Log.final.out alignments/SRR6703970_time_101FR_1_val_1.Log.out alignments/SRR6703970_time_101FR_1_val_1.Log.progress.out alignments/SRR6703971_time_103SR_1_val_1.Log.final.out alignments/SRR6703971_time_103SR_1_val_1.Log.out alignments/SRR6703971_time_103SR_1_val_1.Log.progress.out alignments/SRR6703972_time_103FR_1_val_1.Log.final.out alignments/SRR6703972_time_103FR_1_val_1.Log.out alignments/SRR6703972_time_103FR_1_val_1.Log.progress.out alignments/SRR6703973_time_104SR_1_val_1.Log.final.out alignments/SRR6703973_time_104SR_1_val_1.Log.out alignments/SRR6703973_time_104SR_1_val_1.Log.progress.out alignments/SRR6703974_time_104FR_1_val_1.Log.final.out alignments/SRR6703974_time_104FR_1_val_1.Log.out alignments/SRR6703974_time_104FR_1_val_1.Log.progress.out alignments/SRR6703975_time_107SR_1_val_1.Log.final.out alignments/SRR6703975_time_107SR_1_val_1.Log.out alignments/SRR6703975_time_107SR_1_val_1.Log.progress.out alignments/SRR6703976_time_107FR_1_val_1.Log.final.out alignments/SRR6703976_time_107FR_1_val_1.Log.out alignments/SRR6703976_time_107FR_1_val_1.Log.progress.out alignments/SRR6703977_time_107SRN_1_val_1.Log.final.out alignments/SRR6703977_time_107SRN_1_val_1.Log.out alignments/SRR6703977_time_107SRN_1_val_1.Log.progress.out alignments/SRR6703978_time_109SR_1_val_1.Log.final.out alignments/SRR6703978_time_109SR_1_val_1.Log.out alignments/SRR6703978_time_109SR_1_val_1.Log.progress.out alignments/SRR6703979_time_109FR_1_val_1.Log.final.out alignments/SRR6703979_time_109FR_1_val_1.Log.out alignments/SRR6703979_time_109FR_1_val_1.Log.progress.out alignments/SRR6703980_time_110SR_1_val_1.Log.final.out alignments/SRR6703980_time_110SR_1_val_1.Log.out alignments/SRR6703980_time_110SR_1_val_1.Log.progress.out alignments/SRR6703981_time_110FR_1_val_1.Log.final.out alignments/SRR6703981_time_110FR_1_val_1.Log.out alignments/SRR6703981_time_110FR_1_val_1.Log.progress.out alignments/SRR6703982_frozen_501_1_val_1.Log.final.out alignments/SRR6703982_frozen_501_1_val_1.Log.out alignments/SRR6703982_frozen_501_1_val_1.Log.progress.out alignments/SRR6703983_frozen_501f_1_val_1.Log.final.out alignments/SRR6703983_frozen_501f_1_val_1.Log.out alignments/SRR6703983_frozen_501f_1_val_1.Log.progress.out alignments/SRR6703984_frozen_506_1_val_1.Log.final.out alignments/SRR6703984_frozen_506_1_val_1.Log.out alignments/SRR6703984_frozen_506_1_val_1.Log.progress.out alignments/SRR6703985_frozen_506f_1_val_1.Log.final.out alignments/SRR6703985_frozen_506f_1_val_1.Log.out alignments/SRR6703985_frozen_506f_1_val_1.Log.progress.out alignments/SRR6703986_frozen_507_1_val_1.Log.final.out alignments/SRR6703986_frozen_507_1_val_1.Log.out alignments/SRR6703986_frozen_507_1_val_1.Log.progress.out alignments/SRR6703987_frozen_507f_1_val_1.Log.final.out alignments/SRR6703987_frozen_507f_1_val_1.Log.out alignments/SRR6703987_frozen_507f_1_val_1.Log.progress.out alignments/SRR6703988_frozen_510_1_val_1.Log.final.out alignments/SRR6703988_frozen_510_1_val_1.Log.out alignments/SRR6703988_frozen_510_1_val_1.Log.progress.out alignments/SRR6703989_frozen_510f_1_val_1.Log.final.out alignments/SRR6703989_frozen_510f_1_val_1.Log.out alignments/SRR6703989_frozen_510f_1_val_1.Log.progress.out
+[2021-04-13 11:26:54,012] multiqc                                            [WARNING]  MultiQC Version v1.10.1 now available!
+[2021-04-13 11:26:54,012] multiqc                                            [INFO   ]  This is MultiQC v1.7 (7d61ef5)
+[2021-04-13 11:26:54,012] multiqc                                            [DEBUG  ]  Command     : /pbtech_mounts/softlib001/apps/EL7/spack/opt/spack/linux-centos7-x86_64/gcc-6.3.0/py-multiqc-1.7-7wstaml7opzvdb5liiuxniifwufxfmzv/bin/multiqc -d -v -o multiqc/ RSeqc_2/ alignments/SRR6703961_concentration_1_rep1_1_val_1.Log.final.out alignments/SRR6703961_concentration_1_rep1_1_val_1.Log.out alignments/SRR6703961_concentration_1_rep1_1_val_1.Log.progress.out alignments/SRR6703962_concentration_100_rep1_1_val_1.Log.final.out alignments/SRR6703962_concentration_100_rep1_1_val_1.Log.out alignments/SRR6703962_concentration_100_rep1_1_val_1.Log.progress.out alignments/SRR6703963_concentration_250_rep1_1_val_1.Log.final.out alignments/SRR6703963_concentration_250_rep1_1_val_1.Log.out alignments/SRR6703963_concentration_250_rep1_1_val_1.Log.progress.out alignments/SRR6703964_concentration_500_rep1_1_val_1.Log.final.out alignments/SRR6703964_concentration_500_rep1_1_val_1.Log.out alignments/SRR6703964_concentration_500_rep1_1_val_1.Log.progress.out alignments/SRR6703965_concentration_1_rep2_1_val_1.Log.final.out alignments/SRR6703965_concentration_1_rep2_1_val_1.Log.out alignments/SRR6703965_concentration_1_rep2_1_val_1.Log.progress.out alignments/SRR6703966_concentration_100_rep2_1_val_1.Log.final.out alignments/SRR6703966_concentration_100_rep2_1_val_1.Log.out alignments/SRR6703966_concentration_100_rep2_1_val_1.Log.progress.out alignments/SRR6703967_concentration_100_rep2_1_val_1.Log.final.out alignments/SRR6703967_concentration_100_rep2_1_val_1.Log.out alignments/SRR6703967_concentration_100_rep2_1_val_1.Log.progress.out alignments/SRR6703968_concentration_500_rep2_1_val_1.Log.final.out alignments/SRR6703968_concentration_500_rep2_1_val_1.Log.out alignments/SRR6703968_concentration_500_rep2_1_val_1.Log.progress.out alignments/SRR6703969_time_101SR_1_val_1.Log.final.out alignments/SRR6703969_time_101SR_1_val_1.Log.out alignments/SRR6703969_time_101SR_1_val_1.Log.progress.out alignments/SRR6703970_time_101FR_1_val_1.Log.final.out alignments/SRR6703970_time_101FR_1_val_1.Log.out alignments/SRR6703970_time_101FR_1_val_1.Log.progress.out alignments/SRR6703971_time_103SR_1_val_1.Log.final.out alignments/SRR6703971_time_103SR_1_val_1.Log.out alignments/SRR6703971_time_103SR_1_val_1.Log.progress.out alignments/SRR6703972_time_103FR_1_val_1.Log.final.out alignments/SRR6703972_time_103FR_1_val_1.Log.out alignments/SRR6703972_time_103FR_1_val_1.Log.progress.out alignments/SRR6703973_time_104SR_1_val_1.Log.final.out alignments/SRR6703973_time_104SR_1_val_1.Log.out alignments/SRR6703973_time_104SR_1_val_1.Log.progress.out alignments/SRR6703974_time_104FR_1_val_1.Log.final.out alignments/SRR6703974_time_104FR_1_val_1.Log.out alignments/SRR6703974_time_104FR_1_val_1.Log.progress.out alignments/SRR6703975_time_107SR_1_val_1.Log.final.out alignments/SRR6703975_time_107SR_1_val_1.Log.out alignments/SRR6703975_time_107SR_1_val_1.Log.progress.out alignments/SRR6703976_time_107FR_1_val_1.Log.final.out alignments/SRR6703976_time_107FR_1_val_1.Log.out alignments/SRR6703976_time_107FR_1_val_1.Log.progress.out alignments/SRR6703977_time_107SRN_1_val_1.Log.final.out alignments/SRR6703977_time_107SRN_1_val_1.Log.out alignments/SRR6703977_time_107SRN_1_val_1.Log.progress.out alignments/SRR6703978_time_109SR_1_val_1.Log.final.out alignments/SRR6703978_time_109SR_1_val_1.Log.out alignments/SRR6703978_time_109SR_1_val_1.Log.progress.out alignments/SRR6703979_time_109FR_1_val_1.Log.final.out alignments/SRR6703979_time_109FR_1_val_1.Log.out alignments/SRR6703979_time_109FR_1_val_1.Log.progress.out alignments/SRR6703980_time_110SR_1_val_1.Log.final.out alignments/SRR6703980_time_110SR_1_val_1.Log.out alignments/SRR6703980_time_110SR_1_val_1.Log.progress.out alignments/SRR6703981_time_110FR_1_val_1.Log.final.out alignments/SRR6703981_time_110FR_1_val_1.Log.out alignments/SRR6703981_time_110FR_1_val_1.Log.progress.out alignments/SRR6703982_frozen_501_1_val_1.Log.final.out alignments/SRR6703982_frozen_501_1_val_1.Log.out alignments/SRR6703982_frozen_501_1_val_1.Log.progress.out alignments/SRR6703983_frozen_501f_1_val_1.Log.final.out alignments/SRR6703983_frozen_501f_1_val_1.Log.out alignments/SRR6703983_frozen_501f_1_val_1.Log.progress.out alignments/SRR6703984_frozen_506_1_val_1.Log.final.out alignments/SRR6703984_frozen_506_1_val_1.Log.out alignments/SRR6703984_frozen_506_1_val_1.Log.progress.out alignments/SRR6703985_frozen_506f_1_val_1.Log.final.out alignments/SRR6703985_frozen_506f_1_val_1.Log.out alignments/SRR6703985_frozen_506f_1_val_1.Log.progress.out alignments/SRR6703986_frozen_507_1_val_1.Log.final.out alignments/SRR6703986_frozen_507_1_val_1.Log.out alignments/SRR6703986_frozen_507_1_val_1.Log.progress.out alignments/SRR6703987_frozen_507f_1_val_1.Log.final.out alignments/SRR6703987_frozen_507f_1_val_1.Log.out alignments/SRR6703987_frozen_507f_1_val_1.Log.progress.out alignments/SRR6703988_frozen_510_1_val_1.Log.final.out alignments/SRR6703988_frozen_510_1_val_1.Log.out alignments/SRR6703988_frozen_510_1_val_1.Log.progress.out alignments/SRR6703989_frozen_510f_1_val_1.Log.final.out alignments/SRR6703989_frozen_510f_1_val_1.Log.out alignments/SRR6703989_frozen_510f_1_val_1.Log.progress.out
+[2021-04-13 11:26:54,012] multiqc                                            [DEBUG  ]  Working dir : /athena/angsd/scratch/ilb4001/project
+[2021-04-13 11:26:54,012] multiqc                                            [INFO   ]  Template    : default
+[2021-04-13 11:26:54,013] multiqc                                            [INFO   ]  Prepending directory to sample names
+[2021-04-13 11:26:54,013] multiqc                                            [INFO   ]  Searching 'RSeqc_2/'
+[2021-04-13 11:26:54,013] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703961_concentration_1_rep1_1_val_1.Log.final.out'
+[2021-04-13 11:26:54,013] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703961_concentration_1_rep1_1_val_1.Log.out'
+[2021-04-13 11:26:54,013] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703961_concentration_1_rep1_1_val_1.Log.progress.out'
+[2021-04-13 11:26:54,013] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703962_concentration_100_rep1_1_val_1.Log.final.out'
+[2021-04-13 11:26:54,013] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703962_concentration_100_rep1_1_val_1.Log.out'
+[2021-04-13 11:26:54,013] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703962_concentration_100_rep1_1_val_1.Log.progress.out'
+[2021-04-13 11:26:54,014] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703963_concentration_250_rep1_1_val_1.Log.final.out'
+[2021-04-13 11:26:54,014] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703963_concentration_250_rep1_1_val_1.Log.out'
+[2021-04-13 11:26:54,014] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703963_concentration_250_rep1_1_val_1.Log.progress.out'
+[2021-04-13 11:26:54,014] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703964_concentration_500_rep1_1_val_1.Log.final.out'
+[2021-04-13 11:26:54,014] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703964_concentration_500_rep1_1_val_1.Log.out'
+[2021-04-13 11:26:54,014] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703964_concentration_500_rep1_1_val_1.Log.progress.out'
+[2021-04-13 11:26:54,014] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703965_concentration_1_rep2_1_val_1.Log.final.out'
+[2021-04-13 11:26:54,014] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703965_concentration_1_rep2_1_val_1.Log.out'
+[2021-04-13 11:26:54,015] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703965_concentration_1_rep2_1_val_1.Log.progress.out'
+[2021-04-13 11:26:54,015] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703966_concentration_100_rep2_1_val_1.Log.final.out'
+[2021-04-13 11:26:54,015] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703966_concentration_100_rep2_1_val_1.Log.out'
+[2021-04-13 11:26:54,015] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703966_concentration_100_rep2_1_val_1.Log.progress.out'
+[2021-04-13 11:26:54,015] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703967_concentration_100_rep2_1_val_1.Log.final.out'
+[2021-04-13 11:26:54,015] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703967_concentration_100_rep2_1_val_1.Log.out'
+[2021-04-13 11:26:54,015] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703967_concentration_100_rep2_1_val_1.Log.progress.out'
+[2021-04-13 11:26:54,015] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703968_concentration_500_rep2_1_val_1.Log.final.out'
+[2021-04-13 11:26:54,015] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703968_concentration_500_rep2_1_val_1.Log.out'
+[2021-04-13 11:26:54,016] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703968_concentration_500_rep2_1_val_1.Log.progress.out'
+[2021-04-13 11:26:54,016] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703969_time_101SR_1_val_1.Log.final.out'
+[2021-04-13 11:26:54,016] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703969_time_101SR_1_val_1.Log.out'
+[2021-04-13 11:26:54,016] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703969_time_101SR_1_val_1.Log.progress.out'
+[2021-04-13 11:26:54,016] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703970_time_101FR_1_val_1.Log.final.out'
+[2021-04-13 11:26:54,016] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703970_time_101FR_1_val_1.Log.out'
+[2021-04-13 11:26:54,016] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703970_time_101FR_1_val_1.Log.progress.out'
+[2021-04-13 11:26:54,016] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703971_time_103SR_1_val_1.Log.final.out'
+[2021-04-13 11:26:54,017] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703971_time_103SR_1_val_1.Log.out'
+[2021-04-13 11:26:54,017] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703971_time_103SR_1_val_1.Log.progress.out'
+[2021-04-13 11:26:54,017] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703972_time_103FR_1_val_1.Log.final.out'
+[2021-04-13 11:26:54,017] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703972_time_103FR_1_val_1.Log.out'
+[2021-04-13 11:26:54,017] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703972_time_103FR_1_val_1.Log.progress.out'
+[2021-04-13 11:26:54,017] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703973_time_104SR_1_val_1.Log.final.out'
+[2021-04-13 11:26:54,017] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703973_time_104SR_1_val_1.Log.out'
+[2021-04-13 11:26:54,017] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703973_time_104SR_1_val_1.Log.progress.out'
+[2021-04-13 11:26:54,017] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703974_time_104FR_1_val_1.Log.final.out'
+[2021-04-13 11:26:54,018] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703974_time_104FR_1_val_1.Log.out'
+[2021-04-13 11:26:54,018] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703974_time_104FR_1_val_1.Log.progress.out'
+[2021-04-13 11:26:54,018] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703975_time_107SR_1_val_1.Log.final.out'
+[2021-04-13 11:26:54,018] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703975_time_107SR_1_val_1.Log.out'
+[2021-04-13 11:26:54,018] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703975_time_107SR_1_val_1.Log.progress.out'
+[2021-04-13 11:26:54,018] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703976_time_107FR_1_val_1.Log.final.out'
+[2021-04-13 11:26:54,018] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703976_time_107FR_1_val_1.Log.out'
+[2021-04-13 11:26:54,018] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703976_time_107FR_1_val_1.Log.progress.out'
+[2021-04-13 11:26:54,019] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703977_time_107SRN_1_val_1.Log.final.out'
+[2021-04-13 11:26:54,019] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703977_time_107SRN_1_val_1.Log.out'
+[2021-04-13 11:26:54,019] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703977_time_107SRN_1_val_1.Log.progress.out'
+[2021-04-13 11:26:54,019] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703978_time_109SR_1_val_1.Log.final.out'
+[2021-04-13 11:26:54,019] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703978_time_109SR_1_val_1.Log.out'
+[2021-04-13 11:26:54,019] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703978_time_109SR_1_val_1.Log.progress.out'
+[2021-04-13 11:26:54,019] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703979_time_109FR_1_val_1.Log.final.out'
+[2021-04-13 11:26:54,019] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703979_time_109FR_1_val_1.Log.out'
+[2021-04-13 11:26:54,020] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703979_time_109FR_1_val_1.Log.progress.out'
+[2021-04-13 11:26:54,020] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703980_time_110SR_1_val_1.Log.final.out'
+[2021-04-13 11:26:54,020] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703980_time_110SR_1_val_1.Log.out'
+[2021-04-13 11:26:54,020] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703980_time_110SR_1_val_1.Log.progress.out'
+[2021-04-13 11:26:54,020] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703981_time_110FR_1_val_1.Log.final.out'
+[2021-04-13 11:26:54,020] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703981_time_110FR_1_val_1.Log.out'
+[2021-04-13 11:26:54,020] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703981_time_110FR_1_val_1.Log.progress.out'
+[2021-04-13 11:26:54,020] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703982_frozen_501_1_val_1.Log.final.out'
+[2021-04-13 11:26:54,020] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703982_frozen_501_1_val_1.Log.out'
+[2021-04-13 11:26:54,021] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703982_frozen_501_1_val_1.Log.progress.out'
+[2021-04-13 11:26:54,021] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703983_frozen_501f_1_val_1.Log.final.out'
+[2021-04-13 11:26:54,021] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703983_frozen_501f_1_val_1.Log.out'
+[2021-04-13 11:26:54,021] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703983_frozen_501f_1_val_1.Log.progress.out'
+[2021-04-13 11:26:54,021] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703984_frozen_506_1_val_1.Log.final.out'
+[2021-04-13 11:26:54,021] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703984_frozen_506_1_val_1.Log.out'
+[2021-04-13 11:26:54,021] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703984_frozen_506_1_val_1.Log.progress.out'
+[2021-04-13 11:26:54,021] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703985_frozen_506f_1_val_1.Log.final.out'
+[2021-04-13 11:26:54,022] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703985_frozen_506f_1_val_1.Log.out'
+[2021-04-13 11:26:54,022] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703985_frozen_506f_1_val_1.Log.progress.out'
+[2021-04-13 11:26:54,022] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703986_frozen_507_1_val_1.Log.final.out'
+[2021-04-13 11:26:54,022] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703986_frozen_507_1_val_1.Log.out'
+[2021-04-13 11:26:54,022] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703986_frozen_507_1_val_1.Log.progress.out'
+[2021-04-13 11:26:54,022] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703987_frozen_507f_1_val_1.Log.final.out'
+[2021-04-13 11:26:54,022] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703987_frozen_507f_1_val_1.Log.out'
+[2021-04-13 11:26:54,022] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703987_frozen_507f_1_val_1.Log.progress.out'
+[2021-04-13 11:26:54,022] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703988_frozen_510_1_val_1.Log.final.out'
+[2021-04-13 11:26:54,023] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703988_frozen_510_1_val_1.Log.out'
+[2021-04-13 11:26:54,023] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703988_frozen_510_1_val_1.Log.progress.out'
+[2021-04-13 11:26:54,023] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703989_frozen_510f_1_val_1.Log.final.out'
+[2021-04-13 11:26:54,023] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703989_frozen_510f_1_val_1.Log.out'
+[2021-04-13 11:26:54,023] multiqc                                            [INFO   ]  Searching 'alignments/SRR6703989_frozen_510f_1_val_1.Log.progress.out'
+[2021-04-13 11:26:54,024] multiqc                                            [DEBUG  ]  Analysing modules: custom_content, conpair, peddy, methylQA, phantompeakqualtools, qualimap, preseq, quast, qorts, rna_seqc, rsem, rseqc, busco, goleft_indexcov, disambiguate, supernova, deeptools, sargasso, verifybamid, mirtrace, happy, homer, macs2, theta2, snpeff, gatk, htseq, bcftools, featureCounts, dedup, damageprofiler, picard, prokka, samblaster, samtools, bamtools, jellyfish, vcftools, longranger, stacks, bbmap, bismark, biscuit, hicexplorer, hicup, hicpro, salmon, kallisto, slamdunk, star, hisat2, tophat, bowtie2, bowtie1, kat, leehom, adapterRemoval, clipandmerge, cutadapt, flexbar, trimmomatic, skewer, sortmerna, biobloomtools, fastq_screen, afterqc, fastp, fastqc, minionqc, clusterflow, bcl2fastq, interop, flash
+[2021-04-13 11:26:54,024] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /tmp/tmpbpklpvla
+[2021-04-13 11:26:54,106] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: rseqc_geneBody_coverage.out.geneBodyCoverage.curves.pdf
+[2021-04-13 11:26:54,126] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: rseqc_geneBody_coverage.out.geneBodyCoverage.curves.pdf
+[2021-04-13 11:26:54,145] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: rseqc_geneBody_coverage.out.geneBodyCoverage.curves.pdf
+[2021-04-13 11:26:54,164] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: rseqc_geneBody_coverage.out.geneBodyCoverage.curves.pdf
+[2021-04-13 11:26:54,184] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: rseqc_geneBody_coverage.out.geneBodyCoverage.curves.pdf
+[2021-04-13 11:26:54,203] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: rseqc_geneBody_coverage.out.geneBodyCoverage.curves.pdf
+[2021-04-13 11:26:54,222] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: rseqc_geneBody_coverage.out.geneBodyCoverage.curves.pdf
+[2021-04-13 11:26:54,241] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: rseqc_geneBody_coverage.out.geneBodyCoverage.curves.pdf
+[2021-04-13 11:26:54,260] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: rseqc_geneBody_coverage.out.geneBodyCoverage.curves.pdf
+[2021-04-13 11:26:54,280] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: rseqc_geneBody_coverage.out.geneBodyCoverage.curves.pdf
+[2021-04-13 11:26:54,299] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: rseqc_geneBody_coverage.out.geneBodyCoverage.curves.pdf
+[2021-04-13 11:26:54,318] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: rseqc_geneBody_coverage.out.geneBodyCoverage.curves.pdf
+[2021-04-13 11:26:54,337] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: rseqc_geneBody_coverage.out.geneBodyCoverage.curves.pdf
+[2021-04-13 11:26:54,356] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: rseqc_geneBody_coverage.out.geneBodyCoverage.curves.pdf
+[2021-04-13 11:26:54,376] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: rseqc_geneBody_coverage.out.geneBodyCoverage.curves.pdf
+[2021-04-13 11:26:54,395] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: rseqc_geneBody_coverage.out.geneBodyCoverage.curves.pdf
+[2021-04-13 11:26:54,414] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: rseqc_geneBody_coverage.out.geneBodyCoverage.curves.pdf
+[2021-04-13 11:26:54,433] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: rseqc_geneBody_coverage.out.geneBodyCoverage.curves.pdf
+[2021-04-13 11:26:54,452] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: rseqc_geneBody_coverage.out.geneBodyCoverage.curves.pdf
+[2021-04-13 11:26:54,472] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: rseqc_geneBody_coverage.out.geneBodyCoverage.curves.pdf
+[2021-04-13 11:26:54,491] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: rseqc_geneBody_coverage.out.geneBodyCoverage.curves.pdf
+[2021-04-13 11:26:56,656] multiqc                                            [DEBUG  ]  No samples found: custom_content
+[2021-04-13 11:26:56,661] multiqc                                            [DEBUG  ]  No samples found: conpair
+[2021-04-13 11:26:56,665] multiqc                                            [DEBUG  ]  No samples found: peddy
+[2021-04-13 11:26:56,670] multiqc                                            [DEBUG  ]  No samples found: methylQA
+[2021-04-13 11:26:56,674] multiqc                                            [DEBUG  ]  No samples found: phantompeakqualtools
+[2021-04-13 11:26:56,679] multiqc                                            [DEBUG  ]  No samples found: qualimap
+[2021-04-13 11:26:56,683] multiqc                                            [DEBUG  ]  No samples found: preseq
+[2021-04-13 11:26:56,688] multiqc                                            [DEBUG  ]  No samples found: quast
+[2021-04-13 11:26:56,692] multiqc                                            [DEBUG  ]  No samples found: qorts
+[2021-04-13 11:26:56,696] multiqc                                            [DEBUG  ]  No samples found: rna_seqc
+[2021-04-13 11:26:56,700] multiqc                                            [DEBUG  ]  No samples found: rsem
+[2021-04-13 11:26:56,730] multiqc.modules.rseqc.rseqc                        [INFO   ]  Found 21 read_distribution reports
+[2021-04-13 11:26:56,753] multiqc.modules.rseqc.rseqc                        [INFO   ]  Found 21 gene_body_coverage reports
+[2021-04-13 11:26:56,760] multiqc                                            [DEBUG  ]  No samples found: busco
+[2021-04-13 11:26:56,764] multiqc                                            [DEBUG  ]  No samples found: goleft_indexcov
+[2021-04-13 11:26:56,769] multiqc                                            [DEBUG  ]  No samples found: disambiguate
+[2021-04-13 11:26:56,773] multiqc                                            [DEBUG  ]  No samples found: supernova
+[2021-04-13 11:26:56,781] multiqc                                            [DEBUG  ]  No samples found: deeptools
+[2021-04-13 11:26:56,785] multiqc                                            [DEBUG  ]  No samples found: sargasso
+[2021-04-13 11:26:56,789] multiqc                                            [DEBUG  ]  No samples found: verifybamid
+[2021-04-13 11:26:56,794] multiqc                                            [DEBUG  ]  No samples found: mirtrace
+[2021-04-13 11:26:56,798] multiqc                                            [DEBUG  ]  No samples found: happy
+[2021-04-13 11:26:56,803] multiqc                                            [DEBUG  ]  No samples found: homer
+[2021-04-13 11:26:56,807] multiqc                                            [DEBUG  ]  No samples found: macs2
+[2021-04-13 11:26:56,811] multiqc                                            [DEBUG  ]  No samples found: theta2
+[2021-04-13 11:26:56,816] multiqc                                            [DEBUG  ]  No samples found: snpeff
+[2021-04-13 11:26:56,821] multiqc                                            [DEBUG  ]  No samples found: gatk
+[2021-04-13 11:26:56,826] multiqc                                            [DEBUG  ]  No samples found: htseq
+[2021-04-13 11:26:56,830] multiqc                                            [DEBUG  ]  No samples found: bcftools
+[2021-04-13 11:26:56,834] multiqc                                            [DEBUG  ]  No samples found: featureCounts
+[2021-04-13 11:26:56,839] multiqc                                            [DEBUG  ]  No samples found: dedup
+[2021-04-13 11:26:56,843] multiqc                                            [DEBUG  ]  No samples found: damageprofiler
+[2021-04-13 11:26:56,852] multiqc                                            [DEBUG  ]  No samples found: picard
+[2021-04-13 11:26:56,857] multiqc                                            [DEBUG  ]  No samples found: prokka
+[2021-04-13 11:26:56,861] multiqc                                            [DEBUG  ]  No samples found: samblaster
+[2021-04-13 11:26:56,867] multiqc                                            [DEBUG  ]  No samples found: samtools
+[2021-04-13 11:26:56,871] multiqc                                            [DEBUG  ]  No samples found: bamtools
+[2021-04-13 11:26:56,876] multiqc                                            [DEBUG  ]  No samples found: jellyfish
+[2021-04-13 11:26:56,881] multiqc                                            [DEBUG  ]  No samples found: vcftools
+[2021-04-13 11:26:56,886] multiqc                                            [DEBUG  ]  No samples found: longranger
+[2021-04-13 11:26:56,890] multiqc                                            [DEBUG  ]  No samples found: stacks
+[2021-04-13 11:26:56,899] multiqc                                            [DEBUG  ]  No samples found: bbmap
+[2021-04-13 11:26:56,904] multiqc                                            [DEBUG  ]  No samples found: bismark
+[2021-04-13 11:26:56,908] multiqc                                            [DEBUG  ]  No samples found: biscuit
+[2021-04-13 11:26:56,912] multiqc                                            [DEBUG  ]  No samples found: hicexplorer
+[2021-04-13 11:26:56,917] multiqc                                            [DEBUG  ]  No samples found: hicup
+[2021-04-13 11:26:56,921] multiqc                                            [DEBUG  ]  No samples found: hicpro
+[2021-04-13 11:26:56,925] multiqc                                            [DEBUG  ]  No samples found: salmon
+[2021-04-13 11:26:56,930] multiqc                                            [DEBUG  ]  No samples found: kallisto
+[2021-04-13 11:26:56,934] multiqc                                            [DEBUG  ]  No samples found: slamdunk
+[2021-04-13 11:26:56,952] multiqc.modules.star.star                          [INFO   ]  Found 29 reports
+[2021-04-13 11:26:56,958] multiqc                                            [DEBUG  ]  No samples found: hisat2
+[2021-04-13 11:26:56,962] multiqc                                            [DEBUG  ]  No samples found: tophat
+[2021-04-13 11:26:56,969] multiqc                                            [DEBUG  ]  No samples found: bowtie2
+[2021-04-13 11:26:56,974] multiqc                                            [DEBUG  ]  No samples found: bowtie1
+[2021-04-13 11:26:56,978] multiqc                                            [DEBUG  ]  No samples found: kat
+[2021-04-13 11:26:56,983] multiqc                                            [DEBUG  ]  No samples found: leehom
+[2021-04-13 11:26:56,987] multiqc                                            [DEBUG  ]  No samples found: adapterRemoval
+[2021-04-13 11:26:56,991] multiqc                                            [DEBUG  ]  No samples found: clipandmerge
+[2021-04-13 11:26:56,996] multiqc                                            [DEBUG  ]  No samples found: cutadapt
+[2021-04-13 11:26:57,000] multiqc                                            [DEBUG  ]  No samples found: flexbar
+[2021-04-13 11:26:57,004] multiqc                                            [DEBUG  ]  No samples found: trimmomatic
+[2021-04-13 11:26:57,008] multiqc                                            [DEBUG  ]  No samples found: skewer
+[2021-04-13 11:26:57,013] multiqc                                            [DEBUG  ]  No samples found: sortmerna
+[2021-04-13 11:26:57,017] multiqc                                            [DEBUG  ]  No samples found: biobloomtools
+[2021-04-13 11:26:57,021] multiqc                                            [DEBUG  ]  No samples found: fastq_screen
+[2021-04-13 11:26:57,025] multiqc                                            [DEBUG  ]  No samples found: afterqc
+[2021-04-13 11:26:57,030] multiqc                                            [DEBUG  ]  No samples found: fastp
+[2021-04-13 11:26:57,034] multiqc                                            [DEBUG  ]  No samples found: fastqc
+[2021-04-13 11:26:57,039] multiqc                                            [DEBUG  ]  No samples found: minionqc
+[2021-04-13 11:26:57,043] multiqc                                            [DEBUG  ]  No samples found: clusterflow
+[2021-04-13 11:26:57,047] multiqc                                            [DEBUG  ]  No samples found: bcl2fastq
+[2021-04-13 11:26:57,051] multiqc                                            [DEBUG  ]  No samples found: interop
+[2021-04-13 11:26:57,056] multiqc                                            [DEBUG  ]  No samples found: flash
+[2021-04-13 11:26:57,077] multiqc                                            [INFO   ]  Compressing plot data
+[2021-04-13 11:26:57,325] multiqc                                            [INFO   ]  Report      : multiqc/multiqc_report.html
+[2021-04-13 11:26:57,325] multiqc                                            [INFO   ]  Data        : multiqc/multiqc_data
+[2021-04-13 11:26:57,326] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpbpklpvla/multiqc_data/multiqc_rseqc_read_distribution.txt' to 'multiqc/multiqc_data'
+[2021-04-13 11:26:57,327] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpbpklpvla/multiqc_data/multiqc_star.txt' to 'multiqc/multiqc_data'
+[2021-04-13 11:26:57,327] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpbpklpvla/multiqc_data/multiqc_general_stats.txt' to 'multiqc/multiqc_data'
+[2021-04-13 11:26:57,328] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpbpklpvla/multiqc_data/multiqc_sources.txt' to 'multiqc/multiqc_data'
+[2021-04-13 11:26:57,329] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpbpklpvla/multiqc_data/multiqc_data.json' to 'multiqc/multiqc_data'
+[2021-04-13 11:26:57,465] multiqc                                            [INFO   ]  MultiQC complete

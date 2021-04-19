@@ -1,0 +1,3 @@
+"0","as.dist(1-corr_coeff, upper = TRUE) %>% "
+"0","  as.matrix %>% "
+"0","  pheatmap::pheatmap(., main = ""Pearson correlation"")"

@@ -1,0 +1,67 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	SRR6703976_time_107FR_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703976_time_107FR_1_fastqc.zip
+FastQC	all_sections	SRR6703970_time_101FR_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703970_time_101FR_2_fastqc.zip
+FastQC	all_sections	SRR6703975_time_107SR_1_val_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703975_time_107SR_1_val_1_fastqc.zip
+FastQC	all_sections	SRR6703976_time_107FR_2_val_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703976_time_107FR_2_val_2_fastqc.zip
+FastQC	all_sections	SRR6703974_time_104FR_1_val_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703974_time_104FR_1_val_1_fastqc.zip
+FastQC	all_sections	SRR6703971_time_103SR_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703971_time_103SR_2_fastqc.zip
+FastQC	all_sections	SRR6703981_time_110FR_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703981_time_110FR_1_trimmed_fastqc.zip
+FastQC	all_sections	SRR6703978_time_109SR_2_fastqc | SRR6703978_time_109SR_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703978_time_109SR_2_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703978_time_109SR_1_fastqc | SRR6703978_time_109SR_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703978_time_109SR_1_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703979_time_109FR_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703979_time_109FR_1_trimmed_fastqc.zip
+FastQC	all_sections	SRR6703975_time_107SR_2_val_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703975_time_107SR_2_val_2_fastqc.zip
+FastQC	all_sections	SRR6703970_time_101FR_2_val_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703970_time_101FR_2_val_2_fastqc.zip
+FastQC	all_sections	SRR6703981_time_110FR_1_fastqc | SRR6703981_time_110FR_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703981_time_110FR_1_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703976_time_107FR_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703976_time_107FR_2_fastqc.zip
+FastQC	all_sections	SRR6703976_time_107FR_2_fastqc | SRR6703976_time_107FR_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703976_time_107FR_2_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703975_time_107SR_1_fastqc | SRR6703975_time_107SR_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703975_time_107SR_1_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703977_time_107SRN_1_fastqc | SRR6703977_time_107SRN_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703977_time_107SRN_1_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703980_time_110SR_2_val_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703980_time_110SR_2_val_2_fastqc.zip
+FastQC	all_sections	SRR6703973_time_104SR_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703973_time_104SR_2_fastqc.zip
+FastQC	all_sections	SRR6703970_time_101FR_2_fastqc | SRR6703970_time_101FR_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703970_time_101FR_2_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703980_time_110SR_2_fastqc | SRR6703980_time_110SR_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703980_time_110SR_2_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703974_time_104FR_2_val_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703974_time_104FR_2_val_2_fastqc.zip
+FastQC	all_sections	SRR6703976_time_107FR_1_val_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703976_time_107FR_1_val_1_fastqc.zip
+FastQC	all_sections	SRR6703972_time_103FR_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703972_time_103FR_1_trimmed_fastqc.zip
+FastQC	all_sections	SRR6703977_time_107SRN_2_val_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703977_time_107SRN_2_val_2_fastqc.zip
+FastQC	all_sections	SRR6703977_time_107SRN_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703977_time_107SRN_1_fastqc.zip
+FastQC	all_sections	SRR6703972_time_103FR_1_fastqc | SRR6703972_time_103FR_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703972_time_103FR_1_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703969_time_101SR_2_val_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703969_time_101SR_2_val_2_fastqc.zip
+FastQC	all_sections	SRR6703978_time_109SR_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703978_time_109SR_1_fastqc.zip
+FastQC	all_sections	SRR6703970_time_101FR_1_val_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703970_time_101FR_1_val_1_fastqc.zip
+FastQC	all_sections	SRR6703977_time_107SRN_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703977_time_107SRN_2_fastqc.zip
+FastQC	all_sections	SRR6703971_time_103SR_1_val_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703971_time_103SR_1_val_1_fastqc.zip
+FastQC	all_sections	SRR6703977_time_107SRN_1_val_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703977_time_107SRN_1_val_1_fastqc.zip
+FastQC	all_sections	SRR6703970_time_101FR_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703970_time_101FR_1_fastqc.zip
+FastQC	all_sections	SRR6703969_time_101SR_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703969_time_101SR_1_fastqc.zip
+FastQC	all_sections	SRR6703980_time_110SR_1_fastqc | SRR6703980_time_110SR_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703980_time_110SR_1_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703973_time_104SR_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703973_time_104SR_1_fastqc.zip
+FastQC	all_sections	SRR6703974_time_104FR_1_fastqc | SRR6703974_time_104FR_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703974_time_104FR_1_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703973_time_104SR_1_val_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703973_time_104SR_1_val_1_fastqc.zip
+FastQC	all_sections	SRR6703974_time_104FR_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703974_time_104FR_2_fastqc.zip
+FastQC	all_sections	SRR6703978_time_109SR_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703978_time_109SR_2_fastqc.zip
+FastQC	all_sections	SRR6703976_time_107FR_1_fastqc | SRR6703976_time_107FR_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703976_time_107FR_1_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703975_time_107SR_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703975_time_107SR_1_fastqc.zip
+FastQC	all_sections	SRR6703973_time_104SR_1_fastqc | SRR6703973_time_104SR_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703973_time_104SR_1_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703980_time_110SR_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703980_time_110SR_2_fastqc.zip
+FastQC	all_sections	SRR6703971_time_103SR_1_fastqc | SRR6703971_time_103SR_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703971_time_103SR_1_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703980_time_110SR_1_val_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703980_time_110SR_1_val_1_fastqc.zip
+FastQC	all_sections	SRR6703969_time_101SR_1_val_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703969_time_101SR_1_val_1_fastqc.zip
+FastQC	all_sections	SRR6703969_time_101SR_1_fastqc | SRR6703969_time_101SR_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703969_time_101SR_1_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703978_time_109SR_2_val_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703978_time_109SR_2_val_2_fastqc.zip
+FastQC	all_sections	SRR6703977_time_107SRN_2_fastqc | SRR6703977_time_107SRN_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703977_time_107SRN_2_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703969_time_101SR_2_fastqc | SRR6703969_time_101SR_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703969_time_101SR_2_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703973_time_104SR_2_fastqc | SRR6703973_time_104SR_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703973_time_104SR_2_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703970_time_101FR_1_fastqc | SRR6703970_time_101FR_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703970_time_101FR_1_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703971_time_103SR_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703971_time_103SR_1_fastqc.zip
+FastQC	all_sections	SRR6703975_time_107SR_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703975_time_107SR_2_fastqc.zip
+FastQC	all_sections	SRR6703971_time_103SR_2_fastqc | SRR6703971_time_103SR_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703971_time_103SR_2_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703974_time_104FR_2_fastqc | SRR6703974_time_104FR_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703974_time_104FR_2_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703975_time_107SR_2_fastqc | SRR6703975_time_107SR_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703975_time_107SR_2_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703980_time_110SR_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703980_time_110SR_1_fastqc.zip
+FastQC	all_sections	SRR6703973_time_104SR_2_val_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703973_time_104SR_2_val_2_fastqc.zip
+FastQC	all_sections	SRR6703971_time_103SR_2_val_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703971_time_103SR_2_val_2_fastqc.zip
+FastQC	all_sections	SRR6703978_time_109SR_1_val_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703978_time_109SR_1_val_1_fastqc.zip
+FastQC	all_sections	SRR6703969_time_101SR_2	/athena/angsd/scratch/ilb4001/project/qc/SRR6703969_time_101SR_2_fastqc.zip
+FastQC	all_sections	SRR6703979_time_109FR_1_fastqc | SRR6703979_time_109FR_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703979_time_109FR_1_fastqc/fastqc_data.txt
+FastQC	all_sections	SRR6703974_time_104FR_1	/athena/angsd/scratch/ilb4001/project/qc/SRR6703974_time_104FR_1_fastqc.zip

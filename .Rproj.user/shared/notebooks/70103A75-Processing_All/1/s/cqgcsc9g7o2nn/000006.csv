@@ -1,0 +1,6 @@
+"0","p <- ggplot(summary, aes( x = `#read`, y = samples,  fill=Status))+ geom_bar(stat=""identity"", position=position_dodge()) + theme(legend.position = 'bottom') + labs(title = ""Plots based on featureCount summary file"", subtitle=""featureCounts"")"
+"0",""
+"0","#p <- p + facet_grid(feature ~ . ) "
+"0",""
+"0","p"
+"0",""

@@ -1,0 +1,331 @@
+---
+title: "Download and Begin Processing Data"
+author: "Ilyes Baali"
+date: "2/22/2021"
+output: 
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 4
+vignette: >
+  %\VignetteIndexEntry{Download and Begin Processing Data}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}      
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Data Details
+
+#### where did you get it from?
+
+The data was downloaded from Gene Expression Omnibus (GEO) repository using the `GEO accession number:` [`GSE110417`](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE110417)`
+
+#### what publication is it linked to?
+The data ws used in _Exploring the effect of library preparation on RNA sequencing experiments_ [paper](https://www.sciencedirect.com/science/article/pii/S0888754318303677#s0010)
+
+#### who generated the data?
+**Pease, LR** and **Zhang, Y** were the contributors who generated the data.
+
+#### how was the RNA extracted?
+
+quoting from the data processing section of the sample 
+`Isolated cells were resuspended at 1 million/ml in RPMI containing 10 % FBS and either immediately lysed in 0.7 ml QIAzol lysis reagent (Qiagen) or incubated for 4 h at 37 °C with 25 μl/ml anti-CD3/antiCD28 Human T-Activator Dynabeads (Invitrogen) prior to lysis. Lysates were stored at −80 °C until processing for RNAseq`
+
+
+#### what library prep was used?
+
+TruSeq RNA Library Prep Kit v2 was used for library preparation
+
+#### what cell type was used?
+
+B and CD4+ cells were used to prepare different samples.
+
+#### what was the treatment/experimental condition?
+
+The samples are divided into three experimental conditions, where for each condition some samples were prepared to examine the possible preparation factors that may impact the samples sequencing and the end results. The three factors are: 
+1- cDNA library storage time
+2- RNA input concentration 
+3- Cryopreservation of cell samples
+
+#### what sequencing platform was used?
+
+Illumina HiSeq 2000 sequencing platform was used.
+
+## Download FASTQ files
+For my project the data I intend to use is stored in SRA repository. To download the data from SRA, I used `sra-toolkit` to fetch and extract the fastq files.
+First I obtained the SRR accession list for all the fastq files for the project. I obtained the list from `SRA Run Selector` using the `GEO accession number: GSE110417` [ here](https://www.ncbi.nlm.nih.gov/Traces/study/?acc=PRJNA433678&o=acc_s%3Aa). 
+
+The following command is used to download all the files:
+```{bash prefetch, eval=FALSE}
+prefetch --option-file SRR_Acc_List.txt
+```
+
+The downloaded files are not a proper `.fastq` files that can be processed, instead `SRA-toolkit` downloads `.sra (Sequence Read Archive)`  files. The next step `fastq-dump` tool (there is a faster tool named `fasterq-dump` that was not found on the cluster) is use to extract the `fastq` files from these archive files. The following script is used to extract all the files:
+
+```{bash fastq-dump, eval=FALSE}
+#! /bin/bash -l
+#SBATCH --partition=angsd_class #SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --job-name=SRATofastq
+#SBATCH --time=24:00:00 # HH/MM/SS
+#SBATCH --mem=8G # memory requested, units available: K,M,G,T
+outFile=${DownloadSRA}_${SLURM_JOB_ID}.txt
+echo "Starting at:" `date` >> ${outFile}
+echo "This is job #:" $SLURM_JOB_ID >> ${outFile}
+echo "Running on node:" `hostname` >> ${outFile}
+echo "Running on cluster:" $SLURM_CLUSTER_NAME >> ${outFile}
+echo "This job was assigned the temporary (local) directory:" $TMPDIR >> ${outFile}
+
+spack load -r sra-toolkit
+for file in *.sra; do
+   echo "File Name: " $file >> ${outFile}
+   fastq-dump --split-files --gzip $file
+done
+exit
+
+```
+
+The parameters that are used in the previous step are `--split-files` and `--gzip`. The first one is used to save the pair-end reads to two separate files, and the second is used to save the extracted `fastq` file to `gzip` compressed file. The documentation from the tool are displayed bellow:
+
+```{bash commands, eval=FALSE}
+--split-files    Dump each read into separate file.Files 
+                 will receive suffix corresponding to read 
+                 number 
+--gzip           Compress output using gzip                  
+```
+
+For the purpose of this assignment I will use `SRR6703962` sample. 
+
+## `FastQC` Analysis
+
+First the fastqc report for pair-end fastq files was obtained using the following command:
+
+```{bash fastqc, eval=FALSE }
+#! /bin/bash -l
+
+#SBATCH --partition=angsd_class
+#SBATCH --nodes=1
+#SBATCH --ntasks=4
+#SBATCH --job-name=hi_slurm
+#SBATCH --time=05:00:00 # HH/MM/SS
+#SBATCH --mem=8G # memory requested, units available: K,M,G,T
+outFile=${Fastqc}_${SLURM_JOB_ID}.txt
+echo "Starting at:" `date` >> ${outFile}
+echo "This is job #:" $SLURM_JOB_ID >> ${outFile}
+echo "Running on node:" `hostname` >> ${outFile}
+echo "Running on cluster:" $SLURM_CLUSTER_NAME >> ${outFile}
+echo "This job was assigned the temporary (local) directory:" $TMPDIR >> ${outFile}
+
+spack load -r fastqc
+
+mkdir ${TMPDIR}/ilb4001
+tmp=${TMPDIR}/ilb4001
+
+echo "Copying fastq files to" ${tmp} >> ${outFile}
+cp $SLURM_SUBMIT_DIR/raw_data/SRR6703962_*.fastq ${tmp}
+
+mkdir ${tmp}/fastqc
+resultFolder=${tmp}/fastqc/
+
+echo "Start fastqc...." >> ${outFile}
+fastqc ${tmp}/SRR6703962_*.fastq --extract -o ${resultFolder} |$ tee ${outFile}
+
+echo "copying the results back...." >> ${outFile}
+mkdir ${SLURM_SUBMIT_DIR}/SRR6703962
+
+cp -r ${resultFolder}/* ${SLURM_SUBMIT_DIR}/SRR6703962/
+
+echo "remove tmp directory" >> ${outFile}
+rm -r ${tmp}
+echo "Done!" >> ${outFile}
+
+exit
+```
+
+
+The results from the analysis was all good, except for the first reads file, where two sequences were over-represented as shown in Figure 1. For that, the next step was to run `Trimglore` to trim the over-represented sequences.
+
+![Figure 1: Two sequences over represented in the first pair of reads](Overrepresented sequences.png){ width=80% }
+
+### `TrimGalore` Tool
+
+
+```{bash trimgalore, eval=FALSE }
+srun -n1 --pty --partition=angsd_class --mem=8G bash -i
+spack load -r trimgalore
+trim_galore --illumina raw_data/SRR6703962_*.fastq.gz --stringency 5 -o fastq_trimmed/ 
+```
+
+
+## Reads Alignment
+
+### Downlaod the required files
+
+To align the reads a number two main files are required: 1- Genome file and 2- Annotation file
+Since the samples for the project are human, the human genome fa file is downloaded. For the annotation file we have different choices that we can use depending on the use case. Since we are not dealing with special annotation Ensemble gene annotation file `hg38.ensGene.gtf.gz` is used. 
+
+The following script is used to download the files from [UCSC Browser](https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/):
+
+```{bash downlaod files, eval=FALSE}
+# Create a folder to save the files
+mkdir genome
+cd genome
+
+# Download Human genome hg38 fa file.
+wget --timestamping  'ftp://hgdownload.cse.ucsc.edu/goldenPath/hg38/bigZips/hg38.fa.gz' -O hg38.fa.gz
+
+gunzip hg38.fa.gz
+
+# Download Human genome annotation files. I downloaded everything at first, 
+# and later I decided what annotation file to use 
+# The annotation files are:
+# 1- hg38.ensGene.gtf.gz
+# 2- hg38.knownGene.gtf.gz
+# 3- hg38.ncbiRefSeq.gtf.gz
+# 4- hg38.refGene.gtf.gz
+wget --timestamping 'ftp://hgdownload.cse.ucsc.edu/goldenPath/hg38/bigZips/genes/*'
+
+gunzip hg38.ensGene.gtf.gz
+```
+
+
+### Generate Index and Align Reads
+
+```{bash indexing$Align, eval=FALSE }
+#! /bin/bash -l
+
+#SBATCH --partition=angsd_class
+#SBATCH --nodes=1
+#SBATCH --ntasks=16
+#SBATCH --job-name=IndexGenerator
+#SBATCH --time=12:00:00 # HH/MM/SS
+#SBATCH --mem=36G # memory requested, units available: K,M,G,T
+outFile=IndexAlign_${SLURM_JOB_ID}.txt
+echo "Starting at:" `date` >> ${outFile}
+echo "This is job #:" $SLURM_JOB_ID >> ${outFile}
+echo "Running on cluster:" $SLURM_CLUSTER_NAME >> ${outFile}
+echo "This job was assigned the temporary (local) directory:" $TMPDIR >> ${outFile}
+
+spack load star@2.7.0e
+
+
+mkdir ${TMPDIR}/ilb4001
+tmp=/scratchLocal/ilb4001
+
+echo "Copying files to" ${tmp} >> ${outFile}
+
+# Copy genome and annotation file
+cp $SLURM_SUBMIT_DIR/hg38.fa ${SLURM_SUBMIT_DIR}/hg38.ensGene.gtf ${tmp}
+
+# Copy sample read fastq files
+cp $SLURM_SUBMIT_DIR/fastq_trimmed/SRR6703962_1_val_1.fq ${SLURM_SUBMIT_DIR}/fastq_trimmed/SRR6703962_2_val_2.fq ${tmp}
+
+# Check that all the files were copied without an error
+echo "tmp content..."
+ls ${tmp} | cat >> ${outFile}
+
+############################Indexing######################################
+resultFolder=${tmp}/hg38_STARindex
+mkdir ${resultFolder}
+
+echo "STAR genomeGenerate...." >> ${outFile}
+
+STAR --runMode genomeGenerate \
+--runThreadN 16 \
+--genomeDir ${resultFolder} \
+--genomeFastaFiles hg38.fa \
+--sjdbGTFfile hg38.ensGene.gtf \
+--sjdbOverhang 49 \
+|& tee ${outFile}
+
+
+echo "copying the generated index...." >> ${outFile}
+cp -r ${resultFolder}/* ${SLURM_SUBMIT_DIR}/genome/hg38_STARindex/
+
+############################Alignment######################################
+echo "STAR Alignment...." >> ${outFile}
+
+resultFolder=${tmp}/alignments
+mkdir ${resultFolder}
+
+
+STAR --runMode alignReads \
+--runThreadN 16 \
+--readFilesIn ${tmp}/SRR6703962_1_val_1.fq  ${tmp}/SRR6703962_2_val_2.fq \
+--genomeDir ${tmp}/hg38_STARindex \
+--outSAMtype BAM SortedByCoordinate \
+--outFileNamePrefix ${resultFolder}/SRR6703962.
+
+echo "coying the results back...." >> ${outFile}
+cp -r ${resultFolder}/alignments/* ${SLURM_SUBMIT_DIR}/alignments
+
+echo "remove tmp directory" >> ${outFile}
+rm -r ${tmp}
+
+echo "Check files removed from tmp folder" >> ${outFile}
+ls ${tmp} | cat >> ${outFile}
+
+echo "Done!" >> ${outFile}
+
+exit
+```
+
+
+### Bamqc Analysis
+
+Once the reads were aligned, we run another quality control check to make sure everything is done well and there are no concerns about the quality of reads or mapping. At this point we run `BamQC` using the following commands:
+
+```{bash, eval=FALSE}
+srun -n1 --pty --partition=angsd_class --mem=8G bash -i
+spack load samtools@1.9% gcc@6.3.0
+
+# Index bam file
+samtools index alignments/SRR6703962.Aligned.sortedByCoord.out.bam
+
+# Run BamQC
+/softlib/apps/EL7/BamQC/bin/bamqc alignments/SRR6703962.Aligned.sortedByCoord.out.bam -o alignments/bamqc/
+```
+
+The analysis report of the aligned reads showes everything checks out fine as shown by the summary in Figure 2. A warning was flagged for mapping quality distribution Figure 3. The concern is in the number/percentage of reads mapped to multiple location, over 30% of the reads were mapped to different location, which may require to carefully set the criteria to decide the location of those reads. The other concern is the distribution of the inferred insert length for the pair-end reads. There are around 2-3% of reads that have an insert length >94000 bps as hown in Figure 4. This indicates that these reads are incorrectly mapped. This in turn can be helpful to narrow down the possible mapping regions for the reads that were mapped to multiple regions. 
+
+![Figure 2: Summary of the bamqc for the SRR6703962 sample aligned reads](bam_summary.png){width=100% }
+![Figure 3: Warning at mapping quality distribution control for the aligned reads](Mapping Quality Distribution.png){width=100% }
+
+
+![Figure 4: Insert lenght distribution of ](Insert Length Distribution.png){ width=100% }
+
+
+Here is the structure of the project's folder:
+
+```{bash, eval=FALSE}
+├── genome
+│   ├── hg38.ensGene.gtf
+│   ├── hg38.fa
+│   ├── hg38_STARindex\
+├── raw_data
+│   ├── SRR6703962_1.fastq.gz
+│   ├── SRR6703962_2.fastq.gz
+│   └── SRR_Acc_List.txt
+├── fastqc
+│   ├── SRR6703962_1_fastqc
+│   ├── SRR6703962_2_fastqc.html
+│   └── SRR6703962_2_fastqc.zip
+├── fastq_trimmed
+│   ├── SRR6703962_1.fastq_trimming_report.txt
+│   ├── SRR6703962_1_val_1.fq
+│   ├── SRR6703962_2.fastq_trimming_report.txt
+│   └── SRR6703962_2_val_2.fq
+├── alignments
+│   ├── SRR6703962.Aligned.sortedByCoord.out.bam
+│   ├── SRR6703962.Aligned.sortedByCoord.out.bam.bai
+│   ├── SRR6703962.Log.final.out
+│   ├── SRR6703962.Log.out
+│   ├── SRR6703962.Log.progress.out
+│   ├── SRR6703962.SJ.out.tab
+│   ├── bamqc
+│   │   ├── SRR6703962.Aligned.sortedByCoord.out_bamqc.html
+│   │   └── SRR6703962.Aligned.sortedByCoord.out_bamqc.zip
+```
+

@@ -1,0 +1,280 @@
+[2021-04-17 01:41:28,386] multiqc                                            [DEBUG  ]  No MultiQC config found: /pbtech_mounts/softlib001/apps/EL7/spack/opt/spack/linux-centos7-x86_64/gcc-6.3.0/py-multiqc-1.7-7wstaml7opzvdb5liiuxniifwufxfmzv/lib/python3.5/site-packages/multiqc_config.yaml
+[2021-04-17 01:41:28,386] multiqc                                            [DEBUG  ]  No MultiQC config found: /home/ilb4001/.multiqc_config.yaml
+[2021-04-17 01:41:28,386] multiqc                                            [DEBUG  ]  No MultiQC config found: multiqc_config.yaml
+[2021-04-17 01:41:28,387] multiqc                                            [DEBUG  ]  Command used: /pbtech_mounts/softlib001/apps/EL7/spack/opt/spack/linux-centos7-x86_64/gcc-6.3.0/py-multiqc-1.7-7wstaml7opzvdb5liiuxniifwufxfmzv/bin/multiqc -d -v -o fastqc_multiqc/ SRR6703969_time_101SR_1_fastqc SRR6703969_time_101SR_1_fastqc.html SRR6703969_time_101SR_1_fastqc.zip SRR6703969_time_101SR_1_val_1_fastqc.html SRR6703969_time_101SR_1_val_1_fastqc.zip SRR6703969_time_101SR_2_fastqc SRR6703969_time_101SR_2_fastqc.html SRR6703969_time_101SR_2_fastqc.zip SRR6703969_time_101SR_2_val_2_fastqc.html SRR6703969_time_101SR_2_val_2_fastqc.zip SRR6703970_time_101FR_1_fastqc SRR6703970_time_101FR_1_fastqc.html SRR6703970_time_101FR_1_fastqc.zip SRR6703970_time_101FR_1_val_1_fastqc.html SRR6703970_time_101FR_1_val_1_fastqc.zip SRR6703970_time_101FR_2_fastqc SRR6703970_time_101FR_2_fastqc.html SRR6703970_time_101FR_2_fastqc.zip SRR6703970_time_101FR_2_val_2_fastqc.html SRR6703970_time_101FR_2_val_2_fastqc.zip SRR6703971_time_103SR_1_fastqc SRR6703971_time_103SR_1_fastqc.html SRR6703971_time_103SR_1_fastqc.zip SRR6703971_time_103SR_1_val_1_fastqc.html SRR6703971_time_103SR_1_val_1_fastqc.zip SRR6703971_time_103SR_2_fastqc SRR6703971_time_103SR_2_fastqc.html SRR6703971_time_103SR_2_fastqc.zip SRR6703971_time_103SR_2_val_2_fastqc.html SRR6703971_time_103SR_2_val_2_fastqc.zip SRR6703972_time_103FR_1_fastqc SRR6703972_time_103FR_1_fastqc.html SRR6703972_time_103FR_1_fastqc.zip SRR6703972_time_103FR_1_trimmed_fastqc.html SRR6703972_time_103FR_1_trimmed_fastqc.zip SRR6703973_time_104SR_1_fastqc SRR6703973_time_104SR_1_fastqc.html SRR6703973_time_104SR_1_fastqc.zip SRR6703973_time_104SR_1_val_1_fastqc.html SRR6703973_time_104SR_1_val_1_fastqc.zip SRR6703973_time_104SR_2_fastqc SRR6703973_time_104SR_2_fastqc.html SRR6703973_time_104SR_2_fastqc.zip SRR6703973_time_104SR_2_val_2_fastqc.html SRR6703973_time_104SR_2_val_2_fastqc.zip SRR6703974_time_104FR_1_fastqc SRR6703974_time_104FR_1_fastqc.html SRR6703974_time_104FR_1_fastqc.zip SRR6703974_time_104FR_1_val_1_fastqc.html SRR6703974_time_104FR_1_val_1_fastqc.zip SRR6703974_time_104FR_2_fastqc SRR6703974_time_104FR_2_fastqc.html SRR6703974_time_104FR_2_fastqc.zip SRR6703974_time_104FR_2_val_2_fastqc.html SRR6703974_time_104FR_2_val_2_fastqc.zip SRR6703975_time_107SR_1_fastqc SRR6703975_time_107SR_1_fastqc.html SRR6703975_time_107SR_1_fastqc.zip SRR6703975_time_107SR_1_val_1_fastqc.html SRR6703975_time_107SR_1_val_1_fastqc.zip SRR6703975_time_107SR_2_fastqc SRR6703975_time_107SR_2_fastqc.html SRR6703975_time_107SR_2_fastqc.zip SRR6703975_time_107SR_2_val_2_fastqc.html SRR6703975_time_107SR_2_val_2_fastqc.zip SRR6703976_time_107FR_1_fastqc SRR6703976_time_107FR_1_fastqc.html SRR6703976_time_107FR_1_fastqc.zip SRR6703976_time_107FR_1_val_1_fastqc.html SRR6703976_time_107FR_1_val_1_fastqc.zip SRR6703976_time_107FR_2_fastqc SRR6703976_time_107FR_2_fastqc.html SRR6703976_time_107FR_2_fastqc.zip SRR6703976_time_107FR_2_val_2_fastqc.html SRR6703976_time_107FR_2_val_2_fastqc.zip SRR6703977_time_107SRN_1_fastqc SRR6703977_time_107SRN_1_fastqc.html SRR6703977_time_107SRN_1_fastqc.zip SRR6703977_time_107SRN_1_val_1_fastqc.html SRR6703977_time_107SRN_1_val_1_fastqc.zip SRR6703977_time_107SRN_2_fastqc SRR6703977_time_107SRN_2_fastqc.html SRR6703977_time_107SRN_2_fastqc.zip SRR6703977_time_107SRN_2_val_2_fastqc.html SRR6703977_time_107SRN_2_val_2_fastqc.zip SRR6703978_time_109SR_1_fastqc SRR6703978_time_109SR_1_fastqc.html SRR6703978_time_109SR_1_fastqc.zip SRR6703978_time_109SR_1_val_1_fastqc.html SRR6703978_time_109SR_1_val_1_fastqc.zip SRR6703978_time_109SR_2_fastqc SRR6703978_time_109SR_2_fastqc.html SRR6703978_time_109SR_2_fastqc.zip SRR6703978_time_109SR_2_val_2_fastqc.html SRR6703978_time_109SR_2_val_2_fastqc.zip SRR6703979_time_109FR_1_fastqc SRR6703979_time_109FR_1_fastqc.html SRR6703979_time_109FR_1_fastqc.zip SRR6703979_time_109FR_1_trimmed_fastqc.html SRR6703979_time_109FR_1_trimmed_fastqc.zip SRR6703980_time_110SR_1_fastqc SRR6703980_time_110SR_1_fastqc.html SRR6703980_time_110SR_1_fastqc.zip SRR6703980_time_110SR_1_val_1_fastqc.html SRR6703980_time_110SR_1_val_1_fastqc.zip SRR6703980_time_110SR_2_fastqc SRR6703980_time_110SR_2_fastqc.html SRR6703980_time_110SR_2_fastqc.zip SRR6703980_time_110SR_2_val_2_fastqc.html SRR6703980_time_110SR_2_val_2_fastqc.zip SRR6703981_time_110FR_1_fastqc SRR6703981_time_110FR_1_fastqc.html SRR6703981_time_110FR_1_fastqc.zip SRR6703981_time_110FR_1_trimmed_fastqc.html SRR6703981_time_110FR_1_trimmed_fastqc.zip
+[2021-04-17 01:41:28,871] multiqc                                            [WARNING]  MultiQC Version v1.10.1 now available!
+[2021-04-17 01:41:28,872] multiqc                                            [INFO   ]  This is MultiQC v1.7 (7d61ef5)
+[2021-04-17 01:41:28,872] multiqc                                            [DEBUG  ]  Command     : /pbtech_mounts/softlib001/apps/EL7/spack/opt/spack/linux-centos7-x86_64/gcc-6.3.0/py-multiqc-1.7-7wstaml7opzvdb5liiuxniifwufxfmzv/bin/multiqc -d -v -o fastqc_multiqc/ SRR6703969_time_101SR_1_fastqc SRR6703969_time_101SR_1_fastqc.html SRR6703969_time_101SR_1_fastqc.zip SRR6703969_time_101SR_1_val_1_fastqc.html SRR6703969_time_101SR_1_val_1_fastqc.zip SRR6703969_time_101SR_2_fastqc SRR6703969_time_101SR_2_fastqc.html SRR6703969_time_101SR_2_fastqc.zip SRR6703969_time_101SR_2_val_2_fastqc.html SRR6703969_time_101SR_2_val_2_fastqc.zip SRR6703970_time_101FR_1_fastqc SRR6703970_time_101FR_1_fastqc.html SRR6703970_time_101FR_1_fastqc.zip SRR6703970_time_101FR_1_val_1_fastqc.html SRR6703970_time_101FR_1_val_1_fastqc.zip SRR6703970_time_101FR_2_fastqc SRR6703970_time_101FR_2_fastqc.html SRR6703970_time_101FR_2_fastqc.zip SRR6703970_time_101FR_2_val_2_fastqc.html SRR6703970_time_101FR_2_val_2_fastqc.zip SRR6703971_time_103SR_1_fastqc SRR6703971_time_103SR_1_fastqc.html SRR6703971_time_103SR_1_fastqc.zip SRR6703971_time_103SR_1_val_1_fastqc.html SRR6703971_time_103SR_1_val_1_fastqc.zip SRR6703971_time_103SR_2_fastqc SRR6703971_time_103SR_2_fastqc.html SRR6703971_time_103SR_2_fastqc.zip SRR6703971_time_103SR_2_val_2_fastqc.html SRR6703971_time_103SR_2_val_2_fastqc.zip SRR6703972_time_103FR_1_fastqc SRR6703972_time_103FR_1_fastqc.html SRR6703972_time_103FR_1_fastqc.zip SRR6703972_time_103FR_1_trimmed_fastqc.html SRR6703972_time_103FR_1_trimmed_fastqc.zip SRR6703973_time_104SR_1_fastqc SRR6703973_time_104SR_1_fastqc.html SRR6703973_time_104SR_1_fastqc.zip SRR6703973_time_104SR_1_val_1_fastqc.html SRR6703973_time_104SR_1_val_1_fastqc.zip SRR6703973_time_104SR_2_fastqc SRR6703973_time_104SR_2_fastqc.html SRR6703973_time_104SR_2_fastqc.zip SRR6703973_time_104SR_2_val_2_fastqc.html SRR6703973_time_104SR_2_val_2_fastqc.zip SRR6703974_time_104FR_1_fastqc SRR6703974_time_104FR_1_fastqc.html SRR6703974_time_104FR_1_fastqc.zip SRR6703974_time_104FR_1_val_1_fastqc.html SRR6703974_time_104FR_1_val_1_fastqc.zip SRR6703974_time_104FR_2_fastqc SRR6703974_time_104FR_2_fastqc.html SRR6703974_time_104FR_2_fastqc.zip SRR6703974_time_104FR_2_val_2_fastqc.html SRR6703974_time_104FR_2_val_2_fastqc.zip SRR6703975_time_107SR_1_fastqc SRR6703975_time_107SR_1_fastqc.html SRR6703975_time_107SR_1_fastqc.zip SRR6703975_time_107SR_1_val_1_fastqc.html SRR6703975_time_107SR_1_val_1_fastqc.zip SRR6703975_time_107SR_2_fastqc SRR6703975_time_107SR_2_fastqc.html SRR6703975_time_107SR_2_fastqc.zip SRR6703975_time_107SR_2_val_2_fastqc.html SRR6703975_time_107SR_2_val_2_fastqc.zip SRR6703976_time_107FR_1_fastqc SRR6703976_time_107FR_1_fastqc.html SRR6703976_time_107FR_1_fastqc.zip SRR6703976_time_107FR_1_val_1_fastqc.html SRR6703976_time_107FR_1_val_1_fastqc.zip SRR6703976_time_107FR_2_fastqc SRR6703976_time_107FR_2_fastqc.html SRR6703976_time_107FR_2_fastqc.zip SRR6703976_time_107FR_2_val_2_fastqc.html SRR6703976_time_107FR_2_val_2_fastqc.zip SRR6703977_time_107SRN_1_fastqc SRR6703977_time_107SRN_1_fastqc.html SRR6703977_time_107SRN_1_fastqc.zip SRR6703977_time_107SRN_1_val_1_fastqc.html SRR6703977_time_107SRN_1_val_1_fastqc.zip SRR6703977_time_107SRN_2_fastqc SRR6703977_time_107SRN_2_fastqc.html SRR6703977_time_107SRN_2_fastqc.zip SRR6703977_time_107SRN_2_val_2_fastqc.html SRR6703977_time_107SRN_2_val_2_fastqc.zip SRR6703978_time_109SR_1_fastqc SRR6703978_time_109SR_1_fastqc.html SRR6703978_time_109SR_1_fastqc.zip SRR6703978_time_109SR_1_val_1_fastqc.html SRR6703978_time_109SR_1_val_1_fastqc.zip SRR6703978_time_109SR_2_fastqc SRR6703978_time_109SR_2_fastqc.html SRR6703978_time_109SR_2_fastqc.zip SRR6703978_time_109SR_2_val_2_fastqc.html SRR6703978_time_109SR_2_val_2_fastqc.zip SRR6703979_time_109FR_1_fastqc SRR6703979_time_109FR_1_fastqc.html SRR6703979_time_109FR_1_fastqc.zip SRR6703979_time_109FR_1_trimmed_fastqc.html SRR6703979_time_109FR_1_trimmed_fastqc.zip SRR6703980_time_110SR_1_fastqc SRR6703980_time_110SR_1_fastqc.html SRR6703980_time_110SR_1_fastqc.zip SRR6703980_time_110SR_1_val_1_fastqc.html SRR6703980_time_110SR_1_val_1_fastqc.zip SRR6703980_time_110SR_2_fastqc SRR6703980_time_110SR_2_fastqc.html SRR6703980_time_110SR_2_fastqc.zip SRR6703980_time_110SR_2_val_2_fastqc.html SRR6703980_time_110SR_2_val_2_fastqc.zip SRR6703981_time_110FR_1_fastqc SRR6703981_time_110FR_1_fastqc.html SRR6703981_time_110FR_1_fastqc.zip SRR6703981_time_110FR_1_trimmed_fastqc.html SRR6703981_time_110FR_1_trimmed_fastqc.zip
+[2021-04-17 01:41:28,873] multiqc                                            [DEBUG  ]  Working dir : /athena/angsd/scratch/ilb4001/project/qc
+[2021-04-17 01:41:28,873] multiqc                                            [INFO   ]  Template    : default
+[2021-04-17 01:41:28,873] multiqc                                            [INFO   ]  Prepending directory to sample names
+[2021-04-17 01:41:28,873] multiqc                                            [INFO   ]  Searching 'SRR6703969_time_101SR_1_fastqc'
+[2021-04-17 01:41:28,874] multiqc                                            [INFO   ]  Searching 'SRR6703969_time_101SR_1_fastqc.html'
+[2021-04-17 01:41:28,874] multiqc                                            [INFO   ]  Searching 'SRR6703969_time_101SR_1_fastqc.zip'
+[2021-04-17 01:41:28,874] multiqc                                            [INFO   ]  Searching 'SRR6703969_time_101SR_1_val_1_fastqc.html'
+[2021-04-17 01:41:28,875] multiqc                                            [INFO   ]  Searching 'SRR6703969_time_101SR_1_val_1_fastqc.zip'
+[2021-04-17 01:41:28,875] multiqc                                            [INFO   ]  Searching 'SRR6703969_time_101SR_2_fastqc'
+[2021-04-17 01:41:28,875] multiqc                                            [INFO   ]  Searching 'SRR6703969_time_101SR_2_fastqc.html'
+[2021-04-17 01:41:28,875] multiqc                                            [INFO   ]  Searching 'SRR6703969_time_101SR_2_fastqc.zip'
+[2021-04-17 01:41:28,876] multiqc                                            [INFO   ]  Searching 'SRR6703969_time_101SR_2_val_2_fastqc.html'
+[2021-04-17 01:41:28,876] multiqc                                            [INFO   ]  Searching 'SRR6703969_time_101SR_2_val_2_fastqc.zip'
+[2021-04-17 01:41:28,876] multiqc                                            [INFO   ]  Searching 'SRR6703970_time_101FR_1_fastqc'
+[2021-04-17 01:41:28,877] multiqc                                            [INFO   ]  Searching 'SRR6703970_time_101FR_1_fastqc.html'
+[2021-04-17 01:41:28,877] multiqc                                            [INFO   ]  Searching 'SRR6703970_time_101FR_1_fastqc.zip'
+[2021-04-17 01:41:28,877] multiqc                                            [INFO   ]  Searching 'SRR6703970_time_101FR_1_val_1_fastqc.html'
+[2021-04-17 01:41:28,877] multiqc                                            [INFO   ]  Searching 'SRR6703970_time_101FR_1_val_1_fastqc.zip'
+[2021-04-17 01:41:28,878] multiqc                                            [INFO   ]  Searching 'SRR6703970_time_101FR_2_fastqc'
+[2021-04-17 01:41:28,878] multiqc                                            [INFO   ]  Searching 'SRR6703970_time_101FR_2_fastqc.html'
+[2021-04-17 01:41:28,878] multiqc                                            [INFO   ]  Searching 'SRR6703970_time_101FR_2_fastqc.zip'
+[2021-04-17 01:41:28,878] multiqc                                            [INFO   ]  Searching 'SRR6703970_time_101FR_2_val_2_fastqc.html'
+[2021-04-17 01:41:28,879] multiqc                                            [INFO   ]  Searching 'SRR6703970_time_101FR_2_val_2_fastqc.zip'
+[2021-04-17 01:41:28,879] multiqc                                            [INFO   ]  Searching 'SRR6703971_time_103SR_1_fastqc'
+[2021-04-17 01:41:28,879] multiqc                                            [INFO   ]  Searching 'SRR6703971_time_103SR_1_fastqc.html'
+[2021-04-17 01:41:28,879] multiqc                                            [INFO   ]  Searching 'SRR6703971_time_103SR_1_fastqc.zip'
+[2021-04-17 01:41:28,880] multiqc                                            [INFO   ]  Searching 'SRR6703971_time_103SR_1_val_1_fastqc.html'
+[2021-04-17 01:41:28,880] multiqc                                            [INFO   ]  Searching 'SRR6703971_time_103SR_1_val_1_fastqc.zip'
+[2021-04-17 01:41:28,880] multiqc                                            [INFO   ]  Searching 'SRR6703971_time_103SR_2_fastqc'
+[2021-04-17 01:41:28,880] multiqc                                            [INFO   ]  Searching 'SRR6703971_time_103SR_2_fastqc.html'
+[2021-04-17 01:41:28,880] multiqc                                            [INFO   ]  Searching 'SRR6703971_time_103SR_2_fastqc.zip'
+[2021-04-17 01:41:28,881] multiqc                                            [INFO   ]  Searching 'SRR6703971_time_103SR_2_val_2_fastqc.html'
+[2021-04-17 01:41:28,881] multiqc                                            [INFO   ]  Searching 'SRR6703971_time_103SR_2_val_2_fastqc.zip'
+[2021-04-17 01:41:28,881] multiqc                                            [INFO   ]  Searching 'SRR6703972_time_103FR_1_fastqc'
+[2021-04-17 01:41:28,881] multiqc                                            [INFO   ]  Searching 'SRR6703972_time_103FR_1_fastqc.html'
+[2021-04-17 01:41:28,881] multiqc                                            [INFO   ]  Searching 'SRR6703972_time_103FR_1_fastqc.zip'
+[2021-04-17 01:41:28,882] multiqc                                            [INFO   ]  Searching 'SRR6703972_time_103FR_1_trimmed_fastqc.html'
+[2021-04-17 01:41:28,882] multiqc                                            [INFO   ]  Searching 'SRR6703972_time_103FR_1_trimmed_fastqc.zip'
+[2021-04-17 01:41:28,882] multiqc                                            [INFO   ]  Searching 'SRR6703973_time_104SR_1_fastqc'
+[2021-04-17 01:41:28,882] multiqc                                            [INFO   ]  Searching 'SRR6703973_time_104SR_1_fastqc.html'
+[2021-04-17 01:41:28,883] multiqc                                            [INFO   ]  Searching 'SRR6703973_time_104SR_1_fastqc.zip'
+[2021-04-17 01:41:28,883] multiqc                                            [INFO   ]  Searching 'SRR6703973_time_104SR_1_val_1_fastqc.html'
+[2021-04-17 01:41:28,883] multiqc                                            [INFO   ]  Searching 'SRR6703973_time_104SR_1_val_1_fastqc.zip'
+[2021-04-17 01:41:28,883] multiqc                                            [INFO   ]  Searching 'SRR6703973_time_104SR_2_fastqc'
+[2021-04-17 01:41:28,884] multiqc                                            [INFO   ]  Searching 'SRR6703973_time_104SR_2_fastqc.html'
+[2021-04-17 01:41:28,884] multiqc                                            [INFO   ]  Searching 'SRR6703973_time_104SR_2_fastqc.zip'
+[2021-04-17 01:41:28,884] multiqc                                            [INFO   ]  Searching 'SRR6703973_time_104SR_2_val_2_fastqc.html'
+[2021-04-17 01:41:28,884] multiqc                                            [INFO   ]  Searching 'SRR6703973_time_104SR_2_val_2_fastqc.zip'
+[2021-04-17 01:41:28,885] multiqc                                            [INFO   ]  Searching 'SRR6703974_time_104FR_1_fastqc'
+[2021-04-17 01:41:28,885] multiqc                                            [INFO   ]  Searching 'SRR6703974_time_104FR_1_fastqc.html'
+[2021-04-17 01:41:28,885] multiqc                                            [INFO   ]  Searching 'SRR6703974_time_104FR_1_fastqc.zip'
+[2021-04-17 01:41:28,885] multiqc                                            [INFO   ]  Searching 'SRR6703974_time_104FR_1_val_1_fastqc.html'
+[2021-04-17 01:41:28,885] multiqc                                            [INFO   ]  Searching 'SRR6703974_time_104FR_1_val_1_fastqc.zip'
+[2021-04-17 01:41:28,886] multiqc                                            [INFO   ]  Searching 'SRR6703974_time_104FR_2_fastqc'
+[2021-04-17 01:41:28,886] multiqc                                            [INFO   ]  Searching 'SRR6703974_time_104FR_2_fastqc.html'
+[2021-04-17 01:41:28,886] multiqc                                            [INFO   ]  Searching 'SRR6703974_time_104FR_2_fastqc.zip'
+[2021-04-17 01:41:28,886] multiqc                                            [INFO   ]  Searching 'SRR6703974_time_104FR_2_val_2_fastqc.html'
+[2021-04-17 01:41:28,887] multiqc                                            [INFO   ]  Searching 'SRR6703974_time_104FR_2_val_2_fastqc.zip'
+[2021-04-17 01:41:28,887] multiqc                                            [INFO   ]  Searching 'SRR6703975_time_107SR_1_fastqc'
+[2021-04-17 01:41:28,887] multiqc                                            [INFO   ]  Searching 'SRR6703975_time_107SR_1_fastqc.html'
+[2021-04-17 01:41:28,887] multiqc                                            [INFO   ]  Searching 'SRR6703975_time_107SR_1_fastqc.zip'
+[2021-04-17 01:41:28,888] multiqc                                            [INFO   ]  Searching 'SRR6703975_time_107SR_1_val_1_fastqc.html'
+[2021-04-17 01:41:28,888] multiqc                                            [INFO   ]  Searching 'SRR6703975_time_107SR_1_val_1_fastqc.zip'
+[2021-04-17 01:41:28,888] multiqc                                            [INFO   ]  Searching 'SRR6703975_time_107SR_2_fastqc'
+[2021-04-17 01:41:28,888] multiqc                                            [INFO   ]  Searching 'SRR6703975_time_107SR_2_fastqc.html'
+[2021-04-17 01:41:28,888] multiqc                                            [INFO   ]  Searching 'SRR6703975_time_107SR_2_fastqc.zip'
+[2021-04-17 01:41:28,889] multiqc                                            [INFO   ]  Searching 'SRR6703975_time_107SR_2_val_2_fastqc.html'
+[2021-04-17 01:41:28,889] multiqc                                            [INFO   ]  Searching 'SRR6703975_time_107SR_2_val_2_fastqc.zip'
+[2021-04-17 01:41:28,889] multiqc                                            [INFO   ]  Searching 'SRR6703976_time_107FR_1_fastqc'
+[2021-04-17 01:41:28,889] multiqc                                            [INFO   ]  Searching 'SRR6703976_time_107FR_1_fastqc.html'
+[2021-04-17 01:41:28,889] multiqc                                            [INFO   ]  Searching 'SRR6703976_time_107FR_1_fastqc.zip'
+[2021-04-17 01:41:28,890] multiqc                                            [INFO   ]  Searching 'SRR6703976_time_107FR_1_val_1_fastqc.html'
+[2021-04-17 01:41:28,890] multiqc                                            [INFO   ]  Searching 'SRR6703976_time_107FR_1_val_1_fastqc.zip'
+[2021-04-17 01:41:28,890] multiqc                                            [INFO   ]  Searching 'SRR6703976_time_107FR_2_fastqc'
+[2021-04-17 01:41:28,890] multiqc                                            [INFO   ]  Searching 'SRR6703976_time_107FR_2_fastqc.html'
+[2021-04-17 01:41:28,890] multiqc                                            [INFO   ]  Searching 'SRR6703976_time_107FR_2_fastqc.zip'
+[2021-04-17 01:41:28,891] multiqc                                            [INFO   ]  Searching 'SRR6703976_time_107FR_2_val_2_fastqc.html'
+[2021-04-17 01:41:28,891] multiqc                                            [INFO   ]  Searching 'SRR6703976_time_107FR_2_val_2_fastqc.zip'
+[2021-04-17 01:41:28,891] multiqc                                            [INFO   ]  Searching 'SRR6703977_time_107SRN_1_fastqc'
+[2021-04-17 01:41:28,891] multiqc                                            [INFO   ]  Searching 'SRR6703977_time_107SRN_1_fastqc.html'
+[2021-04-17 01:41:28,892] multiqc                                            [INFO   ]  Searching 'SRR6703977_time_107SRN_1_fastqc.zip'
+[2021-04-17 01:41:28,892] multiqc                                            [INFO   ]  Searching 'SRR6703977_time_107SRN_1_val_1_fastqc.html'
+[2021-04-17 01:41:28,892] multiqc                                            [INFO   ]  Searching 'SRR6703977_time_107SRN_1_val_1_fastqc.zip'
+[2021-04-17 01:41:28,892] multiqc                                            [INFO   ]  Searching 'SRR6703977_time_107SRN_2_fastqc'
+[2021-04-17 01:41:28,892] multiqc                                            [INFO   ]  Searching 'SRR6703977_time_107SRN_2_fastqc.html'
+[2021-04-17 01:41:28,893] multiqc                                            [INFO   ]  Searching 'SRR6703977_time_107SRN_2_fastqc.zip'
+[2021-04-17 01:41:28,893] multiqc                                            [INFO   ]  Searching 'SRR6703977_time_107SRN_2_val_2_fastqc.html'
+[2021-04-17 01:41:28,893] multiqc                                            [INFO   ]  Searching 'SRR6703977_time_107SRN_2_val_2_fastqc.zip'
+[2021-04-17 01:41:28,893] multiqc                                            [INFO   ]  Searching 'SRR6703978_time_109SR_1_fastqc'
+[2021-04-17 01:41:28,893] multiqc                                            [INFO   ]  Searching 'SRR6703978_time_109SR_1_fastqc.html'
+[2021-04-17 01:41:28,894] multiqc                                            [INFO   ]  Searching 'SRR6703978_time_109SR_1_fastqc.zip'
+[2021-04-17 01:41:28,894] multiqc                                            [INFO   ]  Searching 'SRR6703978_time_109SR_1_val_1_fastqc.html'
+[2021-04-17 01:41:28,894] multiqc                                            [INFO   ]  Searching 'SRR6703978_time_109SR_1_val_1_fastqc.zip'
+[2021-04-17 01:41:28,894] multiqc                                            [INFO   ]  Searching 'SRR6703978_time_109SR_2_fastqc'
+[2021-04-17 01:41:28,894] multiqc                                            [INFO   ]  Searching 'SRR6703978_time_109SR_2_fastqc.html'
+[2021-04-17 01:41:28,895] multiqc                                            [INFO   ]  Searching 'SRR6703978_time_109SR_2_fastqc.zip'
+[2021-04-17 01:41:28,895] multiqc                                            [INFO   ]  Searching 'SRR6703978_time_109SR_2_val_2_fastqc.html'
+[2021-04-17 01:41:28,895] multiqc                                            [INFO   ]  Searching 'SRR6703978_time_109SR_2_val_2_fastqc.zip'
+[2021-04-17 01:41:28,895] multiqc                                            [INFO   ]  Searching 'SRR6703979_time_109FR_1_fastqc'
+[2021-04-17 01:41:28,896] multiqc                                            [INFO   ]  Searching 'SRR6703979_time_109FR_1_fastqc.html'
+[2021-04-17 01:41:28,896] multiqc                                            [INFO   ]  Searching 'SRR6703979_time_109FR_1_fastqc.zip'
+[2021-04-17 01:41:28,896] multiqc                                            [INFO   ]  Searching 'SRR6703979_time_109FR_1_trimmed_fastqc.html'
+[2021-04-17 01:41:28,896] multiqc                                            [INFO   ]  Searching 'SRR6703979_time_109FR_1_trimmed_fastqc.zip'
+[2021-04-17 01:41:28,896] multiqc                                            [INFO   ]  Searching 'SRR6703980_time_110SR_1_fastqc'
+[2021-04-17 01:41:28,897] multiqc                                            [INFO   ]  Searching 'SRR6703980_time_110SR_1_fastqc.html'
+[2021-04-17 01:41:28,897] multiqc                                            [INFO   ]  Searching 'SRR6703980_time_110SR_1_fastqc.zip'
+[2021-04-17 01:41:28,897] multiqc                                            [INFO   ]  Searching 'SRR6703980_time_110SR_1_val_1_fastqc.html'
+[2021-04-17 01:41:28,897] multiqc                                            [INFO   ]  Searching 'SRR6703980_time_110SR_1_val_1_fastqc.zip'
+[2021-04-17 01:41:28,897] multiqc                                            [INFO   ]  Searching 'SRR6703980_time_110SR_2_fastqc'
+[2021-04-17 01:41:28,898] multiqc                                            [INFO   ]  Searching 'SRR6703980_time_110SR_2_fastqc.html'
+[2021-04-17 01:41:28,898] multiqc                                            [INFO   ]  Searching 'SRR6703980_time_110SR_2_fastqc.zip'
+[2021-04-17 01:41:28,898] multiqc                                            [INFO   ]  Searching 'SRR6703980_time_110SR_2_val_2_fastqc.html'
+[2021-04-17 01:41:28,898] multiqc                                            [INFO   ]  Searching 'SRR6703980_time_110SR_2_val_2_fastqc.zip'
+[2021-04-17 01:41:28,899] multiqc                                            [INFO   ]  Searching 'SRR6703981_time_110FR_1_fastqc'
+[2021-04-17 01:41:28,899] multiqc                                            [INFO   ]  Searching 'SRR6703981_time_110FR_1_fastqc.html'
+[2021-04-17 01:41:28,899] multiqc                                            [INFO   ]  Searching 'SRR6703981_time_110FR_1_fastqc.zip'
+[2021-04-17 01:41:28,899] multiqc                                            [INFO   ]  Searching 'SRR6703981_time_110FR_1_trimmed_fastqc.html'
+[2021-04-17 01:41:28,899] multiqc                                            [INFO   ]  Searching 'SRR6703981_time_110FR_1_trimmed_fastqc.zip'
+[2021-04-17 01:41:28,900] multiqc                                            [DEBUG  ]  Analysing modules: custom_content, conpair, peddy, methylQA, phantompeakqualtools, qualimap, preseq, quast, qorts, rna_seqc, rsem, rseqc, busco, goleft_indexcov, disambiguate, supernova, deeptools, sargasso, verifybamid, mirtrace, happy, homer, macs2, theta2, snpeff, gatk, htseq, bcftools, featureCounts, dedup, damageprofiler, picard, prokka, samblaster, samtools, bamtools, jellyfish, vcftools, longranger, stacks, bbmap, bismark, biscuit, hicexplorer, hicup, hicpro, salmon, kallisto, slamdunk, star, hisat2, tophat, bowtie2, bowtie1, kat, leehom, adapterRemoval, clipandmerge, cutadapt, flexbar, trimmomatic, skewer, sortmerna, biobloomtools, fastq_screen, afterqc, fastp, fastqc, minionqc, clusterflow, bcl2fastq, interop, flash
+[2021-04-17 01:41:28,900] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /tmp/tmpg2he2rye
+[2021-04-17 01:41:29,001] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: fastqc_report.html
+[2021-04-17 01:41:29,127] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703969_time_101SR_1_fastqc.html
+[2021-04-17 01:41:29,128] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703969_time_101SR_1_val_1_fastqc.html
+[2021-04-17 01:41:29,128] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: fastqc_report.html
+[2021-04-17 01:41:29,206] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703969_time_101SR_2_fastqc.html
+[2021-04-17 01:41:29,206] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703969_time_101SR_2_val_2_fastqc.html
+[2021-04-17 01:41:29,207] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: fastqc_report.html
+[2021-04-17 01:41:29,418] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703970_time_101FR_1_fastqc.html
+[2021-04-17 01:41:29,420] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703970_time_101FR_1_val_1_fastqc.html
+[2021-04-17 01:41:29,421] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: fastqc_report.html
+[2021-04-17 01:41:29,517] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703970_time_101FR_2_fastqc.html
+[2021-04-17 01:41:29,518] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703970_time_101FR_2_val_2_fastqc.html
+[2021-04-17 01:41:29,519] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: fastqc_report.html
+[2021-04-17 01:41:29,582] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703971_time_103SR_1_fastqc.html
+[2021-04-17 01:41:29,582] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703971_time_103SR_1_val_1_fastqc.html
+[2021-04-17 01:41:29,583] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: fastqc_report.html
+[2021-04-17 01:41:29,708] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703971_time_103SR_2_fastqc.html
+[2021-04-17 01:41:29,709] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703971_time_103SR_2_val_2_fastqc.html
+[2021-04-17 01:41:29,709] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: fastqc_report.html
+[2021-04-17 01:41:29,765] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703972_time_103FR_1_fastqc.html
+[2021-04-17 01:41:29,766] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703972_time_103FR_1_trimmed_fastqc.html
+[2021-04-17 01:41:29,813] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: fastqc_report.html
+[2021-04-17 01:41:29,906] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703973_time_104SR_1_fastqc.html
+[2021-04-17 01:41:29,906] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703973_time_104SR_1_val_1_fastqc.html
+[2021-04-17 01:41:29,907] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: fastqc_report.html
+[2021-04-17 01:41:29,974] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703973_time_104SR_2_fastqc.html
+[2021-04-17 01:41:29,975] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703973_time_104SR_2_val_2_fastqc.html
+[2021-04-17 01:41:29,976] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: fastqc_report.html
+[2021-04-17 01:41:30,033] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703974_time_104FR_1_fastqc.html
+[2021-04-17 01:41:30,034] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703974_time_104FR_1_val_1_fastqc.html
+[2021-04-17 01:41:30,035] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: fastqc_report.html
+[2021-04-17 01:41:30,092] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703974_time_104FR_2_fastqc.html
+[2021-04-17 01:41:30,093] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703974_time_104FR_2_val_2_fastqc.html
+[2021-04-17 01:41:30,094] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: fastqc_report.html
+[2021-04-17 01:41:30,190] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703975_time_107SR_1_fastqc.html
+[2021-04-17 01:41:30,190] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703975_time_107SR_1_val_1_fastqc.html
+[2021-04-17 01:41:30,234] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: fastqc_report.html
+[2021-04-17 01:41:30,346] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703975_time_107SR_2_fastqc.html
+[2021-04-17 01:41:30,347] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703975_time_107SR_2_val_2_fastqc.html
+[2021-04-17 01:41:30,347] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: fastqc_report.html
+[2021-04-17 01:41:30,410] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703976_time_107FR_1_fastqc.html
+[2021-04-17 01:41:30,411] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703976_time_107FR_1_val_1_fastqc.html
+[2021-04-17 01:41:30,411] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: fastqc_report.html
+[2021-04-17 01:41:30,476] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703976_time_107FR_2_fastqc.html
+[2021-04-17 01:41:30,477] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703976_time_107FR_2_val_2_fastqc.html
+[2021-04-17 01:41:30,478] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: fastqc_report.html
+[2021-04-17 01:41:30,536] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703977_time_107SRN_1_fastqc.html
+[2021-04-17 01:41:30,537] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703977_time_107SRN_1_val_1_fastqc.html
+[2021-04-17 01:41:30,537] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: fastqc_report.html
+[2021-04-17 01:41:30,594] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703977_time_107SRN_2_fastqc.html
+[2021-04-17 01:41:30,595] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703977_time_107SRN_2_val_2_fastqc.html
+[2021-04-17 01:41:30,596] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: fastqc_report.html
+[2021-04-17 01:41:30,653] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703978_time_109SR_1_fastqc.html
+[2021-04-17 01:41:30,654] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703978_time_109SR_1_val_1_fastqc.html
+[2021-04-17 01:41:30,655] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: fastqc_report.html
+[2021-04-17 01:41:30,713] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703978_time_109SR_2_fastqc.html
+[2021-04-17 01:41:30,714] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703978_time_109SR_2_val_2_fastqc.html
+[2021-04-17 01:41:30,715] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: fastqc_report.html
+[2021-04-17 01:41:30,769] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703979_time_109FR_1_fastqc.html
+[2021-04-17 01:41:30,770] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703979_time_109FR_1_trimmed_fastqc.html
+[2021-04-17 01:41:30,771] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: fastqc_report.html
+[2021-04-17 01:41:30,828] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703980_time_110SR_1_fastqc.html
+[2021-04-17 01:41:30,828] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703980_time_110SR_1_val_1_fastqc.html
+[2021-04-17 01:41:30,829] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: fastqc_report.html
+[2021-04-17 01:41:30,886] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703980_time_110SR_2_fastqc.html
+[2021-04-17 01:41:30,887] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703980_time_110SR_2_val_2_fastqc.html
+[2021-04-17 01:41:30,888] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: fastqc_report.html
+[2021-04-17 01:41:31,021] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703981_time_110FR_1_fastqc.html
+[2021-04-17 01:41:31,022] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR6703981_time_110FR_1_trimmed_fastqc.html
+[2021-04-17 01:41:31,429] multiqc                                            [DEBUG  ]  No samples found: custom_content
+[2021-04-17 01:41:31,435] multiqc                                            [DEBUG  ]  No samples found: conpair
+[2021-04-17 01:41:31,443] multiqc                                            [DEBUG  ]  No samples found: peddy
+[2021-04-17 01:41:31,448] multiqc                                            [DEBUG  ]  No samples found: methylQA
+[2021-04-17 01:41:31,454] multiqc                                            [DEBUG  ]  No samples found: phantompeakqualtools
+[2021-04-17 01:41:31,461] multiqc                                            [DEBUG  ]  No samples found: qualimap
+[2021-04-17 01:41:31,466] multiqc                                            [DEBUG  ]  No samples found: preseq
+[2021-04-17 01:41:31,471] multiqc                                            [DEBUG  ]  No samples found: quast
+[2021-04-17 01:41:31,477] multiqc                                            [DEBUG  ]  No samples found: qorts
+[2021-04-17 01:41:31,482] multiqc                                            [DEBUG  ]  No samples found: rna_seqc
+[2021-04-17 01:41:31,488] multiqc                                            [DEBUG  ]  No samples found: rsem
+[2021-04-17 01:41:31,499] multiqc                                            [DEBUG  ]  No samples found: rseqc
+[2021-04-17 01:41:31,504] multiqc                                            [DEBUG  ]  No samples found: busco
+[2021-04-17 01:41:31,510] multiqc                                            [DEBUG  ]  No samples found: goleft_indexcov
+[2021-04-17 01:41:31,515] multiqc                                            [DEBUG  ]  No samples found: disambiguate
+[2021-04-17 01:41:31,521] multiqc                                            [DEBUG  ]  No samples found: supernova
+[2021-04-17 01:41:31,534] multiqc                                            [DEBUG  ]  No samples found: deeptools
+[2021-04-17 01:41:31,540] multiqc                                            [DEBUG  ]  No samples found: sargasso
+[2021-04-17 01:41:31,546] multiqc                                            [DEBUG  ]  No samples found: verifybamid
+[2021-04-17 01:41:31,551] multiqc                                            [DEBUG  ]  No samples found: mirtrace
+[2021-04-17 01:41:31,557] multiqc                                            [DEBUG  ]  No samples found: happy
+[2021-04-17 01:41:31,564] multiqc                                            [DEBUG  ]  No samples found: homer
+[2021-04-17 01:41:31,569] multiqc                                            [DEBUG  ]  No samples found: macs2
+[2021-04-17 01:41:31,574] multiqc                                            [DEBUG  ]  No samples found: theta2
+[2021-04-17 01:41:31,579] multiqc                                            [DEBUG  ]  No samples found: snpeff
+[2021-04-17 01:41:31,586] multiqc                                            [DEBUG  ]  No samples found: gatk
+[2021-04-17 01:41:31,591] multiqc                                            [DEBUG  ]  No samples found: htseq
+[2021-04-17 01:41:31,597] multiqc                                            [DEBUG  ]  No samples found: bcftools
+[2021-04-17 01:41:31,602] multiqc                                            [DEBUG  ]  No samples found: featureCounts
+[2021-04-17 01:41:31,608] multiqc                                            [DEBUG  ]  No samples found: dedup
+[2021-04-17 01:41:31,613] multiqc                                            [DEBUG  ]  No samples found: damageprofiler
+[2021-04-17 01:41:31,628] multiqc                                            [DEBUG  ]  No samples found: picard
+[2021-04-17 01:41:31,634] multiqc                                            [DEBUG  ]  No samples found: prokka
+[2021-04-17 01:41:31,640] multiqc                                            [DEBUG  ]  No samples found: samblaster
+[2021-04-17 01:41:31,648] multiqc                                            [DEBUG  ]  No samples found: samtools
+[2021-04-17 01:41:31,655] multiqc                                            [DEBUG  ]  No samples found: bamtools
+[2021-04-17 01:41:31,661] multiqc                                            [DEBUG  ]  No samples found: jellyfish
+[2021-04-17 01:41:31,669] multiqc                                            [DEBUG  ]  No samples found: vcftools
+[2021-04-17 01:41:31,675] multiqc                                            [DEBUG  ]  No samples found: longranger
+[2021-04-17 01:41:31,681] multiqc                                            [DEBUG  ]  No samples found: stacks
+[2021-04-17 01:41:31,693] multiqc                                            [DEBUG  ]  No samples found: bbmap
+[2021-04-17 01:41:31,699] multiqc                                            [DEBUG  ]  No samples found: bismark
+[2021-04-17 01:41:31,705] multiqc                                            [DEBUG  ]  No samples found: biscuit
+[2021-04-17 01:41:31,710] multiqc                                            [DEBUG  ]  No samples found: hicexplorer
+[2021-04-17 01:41:31,716] multiqc                                            [DEBUG  ]  No samples found: hicup
+[2021-04-17 01:41:31,721] multiqc                                            [DEBUG  ]  No samples found: hicpro
+[2021-04-17 01:41:31,726] multiqc                                            [DEBUG  ]  No samples found: salmon
+[2021-04-17 01:41:31,731] multiqc                                            [DEBUG  ]  No samples found: kallisto
+[2021-04-17 01:41:31,738] multiqc                                            [DEBUG  ]  No samples found: slamdunk
+[2021-04-17 01:41:31,749] multiqc                                            [DEBUG  ]  No samples found: star
+[2021-04-17 01:41:31,759] multiqc                                            [DEBUG  ]  No samples found: hisat2
+[2021-04-17 01:41:31,768] multiqc                                            [DEBUG  ]  No samples found: tophat
+[2021-04-17 01:41:31,776] multiqc                                            [DEBUG  ]  No samples found: bowtie2
+[2021-04-17 01:41:31,784] multiqc                                            [DEBUG  ]  No samples found: bowtie1
+[2021-04-17 01:41:31,792] multiqc                                            [DEBUG  ]  No samples found: kat
+[2021-04-17 01:41:31,799] multiqc                                            [DEBUG  ]  No samples found: leehom
+[2021-04-17 01:41:31,807] multiqc                                            [DEBUG  ]  No samples found: adapterRemoval
+[2021-04-17 01:41:31,815] multiqc                                            [DEBUG  ]  No samples found: clipandmerge
+[2021-04-17 01:41:31,823] multiqc                                            [DEBUG  ]  No samples found: cutadapt
+[2021-04-17 01:41:31,831] multiqc                                            [DEBUG  ]  No samples found: flexbar
+[2021-04-17 01:41:31,839] multiqc                                            [DEBUG  ]  No samples found: trimmomatic
+[2021-04-17 01:41:31,847] multiqc                                            [DEBUG  ]  No samples found: skewer
+[2021-04-17 01:41:31,854] multiqc                                            [DEBUG  ]  No samples found: sortmerna
+[2021-04-17 01:41:31,862] multiqc                                            [DEBUG  ]  No samples found: biobloomtools
+[2021-04-17 01:41:31,870] multiqc                                            [DEBUG  ]  No samples found: fastq_screen
+[2021-04-17 01:41:31,878] multiqc                                            [DEBUG  ]  No samples found: afterqc
+[2021-04-17 01:41:31,886] multiqc                                            [DEBUG  ]  No samples found: fastp
+[2021-04-17 01:41:32,846] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR6703972_time_103FR_1
+[2021-04-17 01:41:33,648] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR6703979_time_109FR_1
+[2021-04-17 01:41:33,769] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR6703981_time_110FR_1
+[2021-04-17 01:41:33,771] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 66 reports
+[2021-04-17 01:41:34,818] multiqc                                            [DEBUG  ]  No samples found: minionqc
+[2021-04-17 01:41:34,824] multiqc                                            [DEBUG  ]  No samples found: clusterflow
+[2021-04-17 01:41:34,829] multiqc                                            [DEBUG  ]  No samples found: bcl2fastq
+[2021-04-17 01:41:34,835] multiqc                                            [DEBUG  ]  No samples found: interop
+[2021-04-17 01:41:34,841] multiqc                                            [DEBUG  ]  No samples found: flash
+[2021-04-17 01:41:34,964] multiqc                                            [INFO   ]  Compressing plot data
+[2021-04-17 01:41:36,486] multiqc                                            [INFO   ]  Report      : fastqc_multiqc/multiqc_report.html
+[2021-04-17 01:41:36,486] multiqc                                            [INFO   ]  Data        : fastqc_multiqc/multiqc_data
+[2021-04-17 01:41:36,487] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpg2he2rye/multiqc_data/multiqc_fastqc.txt' to 'fastqc_multiqc/multiqc_data'
+[2021-04-17 01:41:36,488] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpg2he2rye/multiqc_data/multiqc_general_stats.txt' to 'fastqc_multiqc/multiqc_data'
+[2021-04-17 01:41:36,489] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpg2he2rye/multiqc_data/multiqc_sources.txt' to 'fastqc_multiqc/multiqc_data'
+[2021-04-17 01:41:36,490] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpg2he2rye/multiqc_data/multiqc_data.json' to 'fastqc_multiqc/multiqc_data'
+[2021-04-17 01:41:36,687] multiqc                                            [INFO   ]  MultiQC complete

@@ -1,0 +1,8 @@
+"0","library(DESeq2) "
+"0","library(magrittr) "
+"0","library(ggplot2)"
+"0",""
+"0","load(""./RNAseqGierlinski.RData"")"
+"0",""
+"0","# Calculate the similarity between all pairs of samples using the rlog normalized values "
+"0","corr_coeff <- cor(assay(DESeq.rlog), method = ""pearson"")   "

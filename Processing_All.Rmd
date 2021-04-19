@@ -1,0 +1,494 @@
+---
+title: "Processing All"
+author: "Ilyes Baali"
+date: "3/18/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,warning=FALSE, message=FALSE)
+```
+
+## Renaming file
+
+```{bash, eval=F}
+#! /bin/bash -l
+
+#SBATCH --partition=angsd_class
+#SBATCH -w buddy.pbtech
+#SBATCH --nodes=1
+#SBATCH --ntasks=16
+#SBATCH --job-name=ProcessAll
+#SBATCH --time=48:00:00 # HH/MM/SS
+#SBATCH --mem=36G # memory requested, units available: K,M,G,T
+outFile=ProcessAll_${SLURM_JOB_ID}.txt
+echo "SLURM_SUBMIT_DIR:" ${SLURM_SUBMIT_DIR}  >> ${outFile}
+echo "Starting at:" `date` >> ${outFile}
+echo "This is job #:" $SLURM_JOB_ID >> ${outFile}
+echo "Running on node:" `hostname` >> ${outFile}
+echo "Running on cluster:" $SLURM_CLUSTER_NAME >> ${outFile}
+echo "This job was assigned the temporary (local) directory:" $TMPDIR >> ${outFile}
+
+spack load -r fastqc
+spack load -r trimgalore
+spack load star@2.7.0e
+spack load samtools@1.9% gcc@6.3.0
+spack load subread
+
+
+mkdir /scratchLocal/ilb4001
+tmp=/scratchLocal/ilb4001
+fatqDir=${tmp}/raw_data
+mkdir ${fatqDir}
+
+echo "Copying fastq files to" ${fatqDir} >> ${outFile}
+cp $SLURM_SUBMIT_DIR/raw_data/SRR67*.fastq.gz ${fatqDir}
+
+mkdir ${tmp}/fastqc
+QCDir=${tmp}/fastqc
+
+echo "Start fastqc...." >> ${outFile}
+fastqc $(ls ${fatqDir}/SRR67*.fastq.gz) --extract -o ${QCDir} |$ tee ${outFile}
+
+mkdir ${tmp}/fastq_trimmed
+TrimDir=${tmp}/fastq_trimmed
+echo "Start TrimGalore" >> ${outFile}
+trim_galore --gzip --illumina  --fastqc --fastqc_args "--outdir ${QCDir}" --paired  --stringency 5 -o ${TrimDir}  $(ls ${fatqDir}/SRR67*.fastq.gz)
+
+
+mkdir ${tmp}/genome
+GenomeDir=${tmp}/genome
+echo "Copying Genome files" >> ${outFile}
+cp -r $SLURM_SUBMIT_DIR/genome/hg38_STARindex ${GenomeDir}
+cp $SLURM_SUBMIT_DIR/genome/hg38.ensGene.gtf ${GenomeDir}
+
+
+AlignmDir=${tmp}/alignments
+mkdir ${AlignmDir}
+mkdir ${AlignmDir}/bamqc/
+for sra in $(cat $SLURM_SUBMIT_DIR/raw_data/SRR_Acc_List_v2.txt); do
+
+     sampleName=$(basename ${TrimDir}/${sra}*_1.fq.gz | cut -d '.' -f 1)
+    
+     echo "Run STAR on " ${sampleName} >> ${outFile}
+     STAR --runMode alignReads \
+     --runThreadN 16 \
+     --readFilesIn ${TrimDir}/${sra}*_val_1.fq.gz  ${TrimDir}/${sra}*_val_2.fq.gz \
+     --readFilesCommand zcat \
+     --genomeDir ${GenomeDir}/hg38_STARindex \
+     --outSAMtype BAM SortedByCoordinate \
+     --outFileNamePrefix ${AlignmDir}/${sampleName}.
+    
+     echo "Run samtools index on " ${sampleName} >> ${outFile}
+     samtools index ${AlignmDir}/${sampleName}.Aligned.sortedByCoord.out.bam
+    
+     echo "Run bamqc on " ${sampleName} >> ${outFile}
+     /softlib/apps/EL7/BamQC/bin/bamqc ${AlignmDir}/${sampleName}.Aligned.sortedByCoord.out.bam -o ${AlignmDir}/bamqc/
+ done
+
+
+GTF=${GenomeDir}/hg38.ensGene.gtf
+COUNTFILE=${tmp}/geneCounts.txt 
+# Run featureCounts
+featureCounts -a ${GTF} \
+            -o ${COUNTFILE} \
+            -t 'exon' \
+            -p \
+            --verbose \
+            ${AlignmDir}/*.bam
+
+
+
+echo "coying the results back...." >> ${outFile}
+cp -r ${AlignmDir}/* ${SLURM_SUBMIT_DIR}/alignments
+
+mkdir ${SLURM_SUBMIT_DIR}/qc
+cp -r ${QCDir}/* ${SLURM_SUBMIT_DIR}/qc
+
+cp ${tmp}/geneCounts* ${SLURM_SUBMIT_DIR}
+
+cp -r ${TrimDir} ${SLURM_SUBMIT_DIR}
+
+ echo "remove tmp directory" >> ${outFile}
+ rm -r ${tmp}
+echo "Done!" >> ${outFile}
+
+exit
+```
+
+```{r}
+library(ggplot2) 
+library(DESeq2)
+library(edgeR)
+library(org.Hs.eg.db)
+library(ggpmisc)
+library(patchwork)
+library(stringr)
+library(magrittr)
+library(rtracklayer)
+library(plyranges)
+library(tidyr)
+library("tidyverse")
+library(RColorBrewer)
+library(ggfortify)
+library(pvclust)
+library(ggdendro)
+theme_set(theme_light())
+```
+
+```{r, hide=TRUE}
+
+genes_summary <-  read.table("./geneCounts_v2.txt.summary", header=TRUE)
+
+orig_names <- names(genes_summary)
+new_names <- unlist(lapply(strsplit(orig_names[2:30], "[.]"), function(x) x[5]))
+new_names <- unlist(lapply(strsplit(new_names, "_"), function(x) paste(x[2:(length(x)-3)], collapse="_")))
+
+names(genes_summary) <- c(orig_names[1], new_names)
+
+
+
+
+summary <- genes_summary
+
+# transform the data frame to the proper format
+summary <- gather(data = summary,
+  key = samples,
+  value = `#read`,
+  colnames(summary)[2:30]
+)
+
+summary <- summary[summary$`#read` > 0,]
+```
+
+
+```{r plot, fig.width=10, fig.height=7}
+p <- ggplot(summary, aes( x = `#read`, y = samples,  fill=Status))+ geom_bar(stat="identity", position=position_dodge()) + theme(legend.position = 'bottom') + labs(title = "Plots based on featureCount summary file", subtitle="featureCounts")
+p
+```
+```{r}
+table1 <- read.csv("./table1_paper.txt", header=TRUE)
+table1 <- unite(table1, col = Sample_Name,
+                    Donor, Group, sep = "_")
+p <- ggplot(table1, aes( x = Aligned.M., y = Sample_Name))+ geom_bar(stat="identity", position=position_dodge()) + theme(legend.position = 'bottom') + labs(title = "Plots based on featureCount summary file", subtitle="featureCounts")
+p
+```
+
+
+
+```{r}
+folder <- "./"
+readcounts <- paste0(folder,"geneCounts_v2.txt") %>% read.table(., header=TRUE) 
+readcounts <- readcounts[, -c(7)]
+keep_cols <- colnames(readcounts)[grepl("time", colnames(readcounts))]
+readcounts <- readcounts[, c(names(readcounts)[1:6], keep_cols)]
+```
+
+```{r}
+new_names <- unlist(lapply(strsplit(colnames(readcounts)[7:19], "[.]"), function(x) x[5]))
+new_names <- unlist(lapply(strsplit(new_names, "_"), function(x) paste(x[2:(length(x)-3)], collapse="_")))
+names(readcounts) <- c(names(readcounts)[1:6], new_names)
+```
+
+```{r}
+row.names(readcounts) <- make.names(readcounts$Geneid)
+readcounts <- readcounts[ , -c(1:6)]
+head(readcounts)
+```
+```{r}
+library(EnsDb.Hsapiens.v86)
+edb <- EnsDb.Hsapiens.v86
+
+gene_symbol <- mapIds(org.Hs.eg.db, 
+       keys = rownames(readcounts),
+       column = c("SYMBOL"),
+       keytype = "ENSEMBL")
+
+gene_details <- select(edb, keys=names(gene_symbol), column= c("TXBIOTYPE"),
+       keytype="GENEID")
+## keep only GENEID that for protien coding and lincRNA genes 
+gene_details <- gene_details[gene_details$TXBIOTYPE %in% c("protein_coding", 'lincRNA'), ]
+```
+
+
+```{r}
+sample_info <- data.frame(Sample = names(readcounts), row.names = names(readcounts) )
+sample_info <- separate(sample_info, Sample, c("factor", "donor"), sep = "_")
+sample_info[c('ID', "cond")]<- t(sapply(sample_info$donor, function(s) substring(s, c(1,4), c(3,6))))
+sample_info <- DataFrame(sample_info)
+rownames(sample_info) <- sample_info$donor
+```
+
+```{r}
+DESeq.ds <- DESeqDataSetFromMatrix(countData = readcounts, colData = sample_info, design = ~ cond)
+rowData(DESeq.ds)$GENESYMBOL <- gene_symbol
+DESeq.ds
+```
+
+```{r}
+ colSums(counts(DESeq.ds)) %>% barplot
+```
+
+```{r}
+dim(DESeq.ds)
+```
+
+```{r}
+keep_genes <- rowSums(counts(DESeq.ds)) > 0
+DESeq.ds <- DESeq.ds[ keep_genes, ] 
+dim(DESeq.ds)
+
+assay(DESeq.ds, "CPM") <- edgeR::cpm(counts(DESeq.ds, normalized = FALSE))
+```
+
+```{r}
+cpm <- data.frame(assay(DESeq.ds, "CPM") )
+colnames(cpm) <- colnames(DESeq.ds)
+cpm$GENEID <- rownames(cpm)
+df_cpm <- cpm %>%
+  gather(colnames(cpm), key = "Sample", value = "CPM", -GENEID)
+df_cpm[c('ID', "cond")]<- t(sapply(df_cpm$Sample, function(s) substring(s, c(1,4), c(3,6))))
+ggplot(df_cpm, aes(x=CPM,group=Sample, color=cond )) + 
+  geom_density() +
+  scale_color_brewer( type='div', palette = "Set1") +
+  geom_rug(sides="b") + 
+  scale_x_log10()+
+  labs(caption = "FR:original libraries; SR:3-year libraries")
+```
+
+```{r, fig.width=7, fig.height=4}
+ggplot(df_cpm, aes(y=log10(CPM), x=Sample, fill=cond )) +
+  geom_boxplot() +
+  scale_fill_brewer( type='div', palette = "Set1") +
+  theme(axis.text=element_text(size=9, face='bold'),
+        axis.title=element_text(size=12,face="bold"), 
+        axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
+  labs(caption = "FR:original libraries; SR:3-year libraries")
+  
+```
+
+```{r}
+head(df_cpm)
+df_cpm2 <- merge(x= df_cpm, y= gene_details, by = "GENEID", all.x = TRUE)
+
+ggplot(df_cpm2[!is.na(df_cpm2$TXBIOTYPE), ], aes(y=log10(CPM), x=TXBIOTYPE, fill=Sample)) +
+  geom_boxplot() +
+  scale_fill_brewer( type='div', palette = "RdYlBu") +
+  theme(axis.text=element_text(size=11, face='bold'),
+        axis.title=element_text(size=12,face="bold"), 
+        axis.text.x = element_text(angle = 0, vjust = 0.5, hjust=1))+
+  xlab(label = "") + labs(caption = "FR:original libraries; SR:3-year libraries")
+
+```
+
+```{r, fig.width='100%'}
+
+df <- DESeq.ds[, c("107SR","107FR")] %>% assay(., "CPM") %>% data.frame
+colnames(df) <-  c("107SR","107FR")
+
+p1 <- ggplot(df, aes(x=`107SR`, y=`107FR`)) + geom_point(size=3)+
+  stat_smooth(method="lm", se=FALSE, formula = y ~ x) +
+  stat_fit_glance( aes(label = sprintf('r^2~"="~%.3f~~italic(P)~"="~%.2g', stat(r.squared), stat(p.value))), parse = TRUE, size = 5)
+
+df <- DESeq.ds[, c("107SR","107SRN")] %>% assay(., "CPM") %>% data.frame
+colnames(df) <-  c("107SR","107SRN")
+
+p2 <- ggplot(df, aes(x=`107SR`, y=`107SRN`)) + geom_point(size=3)+
+  stat_smooth(method="lm", se=FALSE, formula = y ~ x) +
+  stat_fit_glance( aes(label = sprintf('r^2~"="~%.3f~~italic(P)~"="~%.2g', stat(r.squared), stat(p.value))), parse = TRUE, size = 5)
+
+
+df <- DESeq.ds[, c("107FR","107SRN")] %>% assay(., "CPM") %>% data.frame
+colnames(df) <-  c("107FR","107SRN")
+
+p3 <- ggplot(df, aes(x=`107FR`, y=`107SRN`)) + geom_point(size=3)+
+  stat_smooth(method="lm", se=FALSE, formula = y ~ x) +
+  stat_fit_glance( aes(label = sprintf('r^2~"="~%.3f~~italic(P)~"="~%.2g', stat(r.squared), stat(p.value))), parse = TRUE, size = 5)
+
+(p1 | p2 | p3) + plot_annotation(tag_levels = 'A')
+
+```
+
+```{r, fig.width=6, fig.height=4}
+# rv <- rowVars(assay(DESeq.ds, "CPM"))
+# 
+# # Obtain the indecies of the top 500 variable genes
+# top_variable <- order(rv, decreasing = TRUE)[seq_len(500)]
+# # Compute the PCAs based on the CPM normalized gene expression
+# pca <- prcomp(t(assay(DESeq.ds, "CPM")))
+DESeq.rlog <- rlog(DESeq.ds, blind = TRUE)
+rv <- rowVars(assay(DESeq.rlog)) # equivalent to rowVars(rlog.norm.counts) 
+
+# Obtain the indecies of the top 500 variable genes
+top_variable <- order(rv, decreasing = TRUE)[seq_len(500)]
+# Compute the PCAs based on the rlog normalized gene expression
+pca <- prcomp(t(assay(DESeq.rlog)[top_variable, ]))
+
+
+data <- data.frame(colData(DESeq.ds))
+colnames(data) <- c("factor","donor", "ID", "Condition" )
+
+# Plot the two top PCs
+p1 <- autoplot(pca, data=data, colour = 'Condition', label = TRUE, label.size = 4, shape = FALSE) +
+  scale_colour_brewer( type='qual', palette = "Set1") +
+  theme(legend.position="bottom") + 
+  labs(caption = "FR:original libraries; SR:3-year libraries")
+
+ggsave('PCA_time.png')
+p1
+```
+
+```{r heatmap plot , fig.width=6, fig.height=4}
+
+sample_df <- as.data.frame(colData(DESeq.ds)[c('ID','cond')])
+colnames(sample_df) <- c('Donor ID', 'Condition')
+ann_colors = list(Condition = c(FR = "#8DA0CB", SR = "#FC8D62", SRN="#66C2A5"))
+
+corr_coeff <- cor(assay(DESeq.rlog), method = "pearson") 
+
+p1 <- as.dist(1-corr_coeff, upper = TRUE) %>% 
+  as.matrix %>%
+pheatmap::pheatmap(., main = "Pearson Distance", annotation_row = sample_df, annotation_colors = ann_colors)
+
+
+
+ 
+```
+
+```{r, fig.width=6, fig.height=4}
+# Run pvclust and restructure data
+d.pv <- as.dendrogram(pvclust(corr_coeff, nboot=10, quiet=T)$hclust)
+
+ddata <- dendro_data(d.pv, type = "rectangle")
+
+# Get data frames to plot
+df_seg <- segment(ddata)
+df_labs <- data.frame(label(ddata), ID = as.factor(sample_df[match(label(ddata)$label, rownames(sample_df)), "Donor ID"]))
+
+# Create ggplot dendrogram
+p <- ggplot()+ 
+  geom_segment(data = df_seg,
+               aes(x = x, y = y, xend = xend, yend = yend),
+               size = 1.25,
+               colour = "darkgray", lineend = "round") +
+  geom_text(data = df_labs, aes(x = x, y = y, label = label, colour = ID), 
+            nudge_y = 0,
+            family = "serif", size = 4, angle = 90, hjust = 1) + 
+  scale_colour_brewer( type='div', palette = "Dark2") +
+  xlab("") + ylab("Height")
+p <- p + theme(axis.line.x = element_blank(),
+               axis.text.x = element_blank(),
+               axis.ticks.x = element_blank(),
+               text = element_text(family = "serif")) +
+  # theme_gray()+
+  scale_y_continuous(expand = expand_scale(add = c(0.25, 0)))
+
+ggsave('dendrogram_time.png')
+p
+```
+
+```{r, fig.width=6, fig.height=4}
+DE_ds <- DESeq.ds[, DESeq.ds$cond != "SRN" ]
+colData(DE_ds)$cond <- factor(as.character(colData(DESeq.ds[, DESeq.ds$cond != "SRN" ])$cond), levels=c("FR", "SR"))
+
+res <- DESeq(DE_ds)
+res_df <- as.data.frame(results(res))
+res_df$SYMBOL <- gene_symbol[match(rownames(res_df), names(gene_symbol))]
+res_df <- res_df[(res_df$padj < 0.05) , ]
+res_df <- res_df[order(res_df$padj),]
+head(res_df)
+
+```
+
+
+
+
+
+```{r}
+par(mfrow=c(1,2)) 
+plot(log.norm.counts[,1:2], cex=.1,
+     main = "size factor and log2-transformed")
+## the rlog-transformed counts are stored in the accessor "assay"
+plot(assay(DESeq.rlog)[,1], assay(DESeq.rlog)[,2],
+cex=.1, main = "rlog transformed",
+xlab = colnames(assay(DESeq.rlog[,1])), ylab = colnames(assay(DESeq.rlog[,2])) )
+
+```
+
+
+```{r}
+DESeq.ds <- estimateSizeFactors(DESeq.ds) # calculate SFs, add them to object
+DESeq.rlog <- rlog(DESeq.ds, blind = TRUE)
+```
+
+```{r}
+assay(DESeq.ds, "log.counts") <- log2(counts(DESeq.ds, normalized = FALSE) + 1)
+## normalized read counts
+log.norm.counts <- log2(counts(DESeq.ds, normalized=TRUE) + 1) 
+assay(DESeq.ds, "log.norm.counts") <- log.norm.counts
+```
+
+
+```{r}
+par(mfrow=c(1,2)) 
+plot(log.norm.counts[,1:2], cex=.1,
+     main = "size factor and log2-transformed")
+## the rlog-transformed counts are stored in the accessor "assay"
+plot(assay(DESeq.rlog)[,1], assay(DESeq.rlog)[,2],
+cex=.1, main = "rlog transformed",
+xlab = colnames(assay(DESeq.rlog[,1])), ylab = colnames(assay(DESeq.rlog[,2])) )
+```
+
+```{r}
+rlog.norm.counts <- assay(DESeq.rlog)
+#save.image(file = "RNAseq.RData")
+```
+
+
+```{r}
+#load("./RNAseq.RData")
+corr_coeff <- cor(rlog.norm.counts, method = "pearson") 
+```
+
+```{r heatmap plot , fig.width=7, fig.height=7}
+as.dist(1-corr_coeff, upper = TRUE) %>% 
+  as.matrix %>% 
+  pheatmap::pheatmap(., main = "Pearson correlation")
+```
+
+```{r dendrogram plot , fig.width=7, fig.height=7}
+
+corr_coeff <- cor(rlog.norm.counts, method = "pearson") 
+par(mfrow=c(1,2))
+
+# Pearson corr. for rlog.norm values 
+
+#Turn the similarity scores to distance values by subtracting the similarity score from 1
+# hclust clusters the samples based on the distance matrix
+as.dist(1 - corr_coeff) %>% 
+  # hclust clusters the samples based on the distance matrix
+  hclust %>% 
+  # Plot the resulting dendrogram
+  plot( ., labels = colnames(rlog.norm.counts), main = "rlog transformed read counts")
+
+# Pearson corr. for log.norm.values
+as.dist( 1 - cor(log.norm.counts, method = "pearson")) %>% 
+  hclust %>% 
+  plot( ., labels = colnames(log.norm.counts), main = "no rlog")
+```
+
+
+```{r PCA plot, fig.width=7, fig.height=7}
+# rowVars calculates the variance of eacg gene across the samples
+rv <- rowVars(assay(DESeq.rlog)) # equivalent to rowVars(rlog.norm.counts) 
+
+# Obtain the indecies of the top 500 variable genes
+top_variable <- order(rv, decreasing = TRUE)[seq_len(500)]
+# Compute the PCAs based on the rlog normalized gene expression
+pca <- prcomp(t(assay(DESeq.rlog)[top_variable, ]))
+
+# Plot the two top PCs
+p <- plotPCA(DESeq.rlog, intgroup='donor') 
+
+p
+```
