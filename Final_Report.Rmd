@@ -56,10 +56,7 @@ The consistency and the accuracy of RNA-seq data are critical to ensure that the
 In this project, we investigate the potential consequences of cDNA library storage time and sample cryopreservation on gene level characterization of RNA-seq experiments. **Our hypothesis is that RNA-seq data is sensitive to sample preparation factors and that can affect the gene expression profiles of the experiments.**.
 
 
-
 # Results
-
-**Another brief paragraph summarizing your key insights and possible future experiments/analyses that might enhance your own analysis.**
 
 The analysis of the possible effects of library storage time and sample cryopreservation shows that the two factors has minor to no effect on the RNA-seq experiments. Figure 1 and 2 shows PCA plot for studying the impact of library storage time and sample cryopreservation, respectively. We see that the samples from the same patient are closest despite the library storage time and sample cryopreservation. The same observation is seen when looking at the hierarchical clustering of the samples as shown in Figure 3 and 4. For future analysis, we may consider adding more samples to the experiment to get a higher confidence on the results. Also, for the library storage time, it would be better to get samples from different time points to point out the main features of the RNA-seq data that change with time. For sample cryopreservation study, we may consider compare different freezing technologies to make a more informed decision when choosing to store samples for an extended period of time. Other than these two factors that were studied here, we can also look at other library preparation steps like, RNA input concentration to obtain a full picture of possible confounding factors.
 
@@ -412,8 +409,6 @@ ggplot(df_read, aes(x=donor, y=prct, fill=region)) +
               axis.text.x = element_text(angle = 0, vjust = 0.5, hjust=1))+ 
   
   xlab("Sample") + ylab("Percentages") +labs(title="Read Distribution")
-
-ggsave("./figures/Read_distribution_time.png")
 ```
 
 
@@ -446,10 +441,8 @@ p1 <- ggplot(df_time, aes(x = x, y = gene_body_prc, group=Sample, color=cond)) +
   scale_colour_brewer( type='div', palette = "Set1")
 
 p1 
-#ggsave('Gene_Body_Coverage_time.png')
 
 ```
-
 
 
 ### Gene Level Charachterization
@@ -527,7 +520,6 @@ ggplot(df_cpm, aes(x=CPM,group=Sample, color=cond )) +
   theme(plot.title = element_text(hjust = 0.5, face='bold'))+
   labs(title='Density distribution of the gene CPM value of all samples', caption = "FR:original libraries; SR:3-year stored libraries")+
   ylab('Density')
-#ggsave("Density_distribution_time.png")
 ```
 
 ```{r, fig.width=9, fig.height=4}
@@ -553,8 +545,6 @@ p2 <- ggplot(df_cpm2[!is.na(df_cpm2$TXBIOTYPE), ], aes(y=log10(CPM), x=TXBIOTYPE
   xlab(label = "") + labs(title= "Comparison of the CPM values between\n lincRNAs and protein-coding genes ", caption = "FR:original libraries; SR:3-year stored libraries")
 
 (p1 | p2)  + plot_annotation(tag_levels = 'A')
-
-#ggsave('CPM_Boxplots.png')
 ```
 
 
@@ -585,8 +575,6 @@ p3 <- ggplot(df, aes(x=`107FR`, y=`107SRN`)) + geom_point(size=3)+
   stat_fit_glance( aes(label = sprintf('r^2~"="~%.3f~~italic(P)~"="~%.2g', stat(r.squared), stat(p.value))), parse = TRUE, size = 5)
 
 (p1 | p2 | p3) + plot_annotation(tag_levels = 'A')
-
-#ggsave("corr_107.png")
 ```
 
 
@@ -618,8 +606,6 @@ p1 <- autoplot(pca, data=data, colour = 'Condition', label = TRUE, label.size = 
   theme(legend.position = "none", 
         plot.title = element_text(hjust = 0.5, face='bold')) + 
   labs(title="PCA plot for Library Storage Time Imapct Samples", caption = "FR:original libraries; SR:3-year libraries")
-
-#ggsave('PCA_time.png')
 p1
 ```
 
@@ -668,8 +654,6 @@ p <- p + theme(axis.line.x = element_blank(),
         axis.text.x= element_blank(),legend.position = "none", 
         plot.title = element_text(hjust = 0.5, face='bold')) +
   labs(title = "Cluster Dendrogram")
-
-#ggsave('dendrogram_time.png')
 p
 ```
 
